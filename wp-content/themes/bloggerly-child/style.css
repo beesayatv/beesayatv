@@ -237,3 +237,15 @@ REMOVE CATEGORY / TAG FOOTER
 .entry-footer {
 display: none !important;
 }
+
+/* ==================================================
+MOBILE READING EXPERIENCE
+================================================== */
+
+@media (max-width: 768px) {
+
+    .single .entry-content {
+        font-size: 1.15rem;
+        line-height: 1.9;
+    }
+}
