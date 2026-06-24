@@ -52,7 +52,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 <link rel="stylesheet" id="bloggerly-style-css" href="/wp-content/themes/bloggerly-child/style.css?ver=1.0.5.1782171480" media="all">
 <link rel="stylesheet" id="chld_thm_cfg_parent-css" href="/wp-content/themes/bloggerly/style.css?ver=7.0" media="all">
-<link rel="stylesheet" id="beesayatv-child-style-css" href="/wp-content/themes/bloggerly-child/style.css?ver=1782313155" media="all">
+<link rel="stylesheet" id="beesayatv-child-style-css" href="/wp-content/themes/bloggerly-child/style.css?ver=1782314244" media="all">
 <link rel="https://api.w.org/" href="/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/pages/96"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
 <meta name="generator" content="WordPress 7.0">
 <link rel="canonical" href="/trail-atlas/">
@@ -106,7 +106,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             
             <div class="entry-content">
                 
-<p class="wp-block-paragraph">This map shows the trails I have explored, documented, and connected across Cebu. Click a route to view photos, trail information, and hike videos. New routes are added as they are explored, making this a growing record of Cebu’s trail network.</p>
+<p class="wp-block-paragraph">This map shows the trails I have explored, documented, and connected across Cebu. Click a route for more info.</p>
 
 
 <div class="leaflet-map WPLeafletMap" style="height:1px; width:100%;"></div><script>
@@ -128,7 +128,7 @@ var base = (!baseUrl && window.MQ) ?
     {});
 window.WPLeafletMapPlugin.createMap(options).setView([44.67,-63.61],12);});</script>
 
-    <div id="beesayatv-test-map" style="height:700px;"></div>
+    <div id="beesayatv-test-map" style="height:500px;"></div>
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -165,7 +165,7 @@ legend.addTo(map);
             }
         ).addTo(map);
 
-        var trails = [{"title":"Alpha Trail Loop","geojson":"\/wp-content\/uploads\/trails\/saturday-morning-hiking.geojson","article":"https:\/\/beesayatv.pages.dev\/the-alpaco-trail-loop-a-quiet-day-exploring-veloso-lake-and-the-countryside-of-naga\/","youtube":"https:\/\/www.youtube.com\/watch?v=URf-EO02OG8","difficulty":"mild"},{"title":"Danasan Trail Loop","geojson":"\/wp-content\/uploads\/trails\/danasan-trail-loop.geojson","article":"https:\/\/www.google.com","youtube":"https:\/\/www.google.com","difficulty":"mild"}];
+        var trails = [{"title":"Alpha Trail Loop","geojson":"\/wp-content\/uploads\/trails\/saturday-morning-hiking.geojson","article":"https:\/\/beesayatv.pages.dev\/the-alpaco-trail-loop-a-quiet-day-exploring-veloso-lake-and-the-countryside-of-naga\/","youtube":"https:\/\/www.youtube.com\/watch?v=URf-EO02OG8","difficulty":"easy"},{"title":"Danasan Trail Loop","geojson":"\/wp-content\/uploads\/trails\/danasan-trail-loop.geojson","article":"https:\/\/www.google.com","youtube":"https:\/\/www.google.com","difficulty":"mild"}];
 
         var allLayers = [];
 
@@ -201,7 +201,8 @@ legend.addTo(map);
                     var layer = L.geoJSON(data, {
                         style: {
                             color: color,
-                            weight: 5
+                            weight: 8,
+							opacity: 0.8
                         }
                     }).addTo(map);
 
