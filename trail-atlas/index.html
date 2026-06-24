@@ -52,7 +52,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 <link rel="stylesheet" id="bloggerly-style-css" href="/wp-content/themes/bloggerly-child/style.css?ver=1.0.5.1782171480" media="all">
 <link rel="stylesheet" id="chld_thm_cfg_parent-css" href="/wp-content/themes/bloggerly/style.css?ver=7.0" media="all">
-<link rel="stylesheet" id="beesayatv-child-style-css" href="/wp-content/themes/bloggerly-child/style.css?ver=1782309512" media="all">
+<link rel="stylesheet" id="beesayatv-child-style-css" href="/wp-content/themes/bloggerly-child/style.css?ver=1782313155" media="all">
 <link rel="https://api.w.org/" href="/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/pages/96"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
 <meta name="generator" content="WordPress 7.0">
 <link rel="canonical" href="/trail-atlas/">
@@ -109,7 +109,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p class="wp-block-paragraph">This map shows the trails I have explored, documented, and connected across Cebu. Click a route to view photos, trail information, and hike videos. New routes are added as they are explored, making this a growing record of Cebu’s trail network.</p>
 
 
-<div class="leaflet-map WPLeafletMap" style="height:500px; width:100%;"></div><script>
+<div class="leaflet-map WPLeafletMap" style="height:1px; width:100%;"></div><script>
 window.WPLeafletMapPlugin = window.WPLeafletMapPlugin || [];
 window.WPLeafletMapPlugin.push(function WPLeafletMapShortcode() {/*<script>*/
 var baseUrl = atob('aHR0cHM6Ly90aWxlLm9wZW5zdHJlZXRtYXAub3JnL3t6fS97eH0ve3l9LnBuZw==');
@@ -124,163 +124,142 @@ var base = (!baseUrl && window.MQ) ?
         layers: [base],
         attributionControl: false
     },
-    {"zoomControl":true,"scrollWheelZoom":true,"doubleClickZoom":true,"fitBounds":true,"minZoom":0,"maxZoom":19,"maxBounds":null,"attribution":"<a href=\"http:\/\/leafletjs.com\" title=\"A JS library for interactive maps\">Leaflet<\/a>; \u00a9 <a href=\"http:\/\/www.openstreetmap.org\/copyright\">OpenStreetMap<\/a> contributors"},
+    {"zoomControl":true,"scrollWheelZoom":true,"doubleClickZoom":true,"fitBounds":false,"minZoom":0,"maxZoom":19,"maxBounds":null,"attribution":"<a href=\"http:\/\/leafletjs.com\" title=\"A JS library for interactive maps\">Leaflet<\/a>; \u00a9 <a href=\"http:\/\/www.openstreetmap.org\/copyright\">OpenStreetMap<\/a> contributors"},
     {});
 window.WPLeafletMapPlugin.createMap(options).setView([44.67,-63.61],12);});</script>
-<script>
-window.WPLeafletMapPlugin = window.WPLeafletMapPlugin || [];
-window.WPLeafletMapPlugin.push(function WPLeafletjsonShortcode() {/*<script>*/
-var src = '/wp-content/uploads/trails/saturday-morning-hiking.geojson';
-var default_style = {"color":"red","weight":5};
-var rewrite_keys = {
-    stroke : 'color',
-    'stroke-width' : 'weight',
-    'stroke-opacity' : 'opacity',
-    fill : 'fillColor',
-    'fill-opacity' : 'fillOpacity',
+
+    <div id="beesayatv-test-map" style="height:700px;"></div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        var map = L.map('beesayatv-test-map');
+		
+		var legend = L.control({position: 'bottomright'});
+
+legend.onAdd = function(map) {
+
+    var div = L.DomUtil.create('div', 'info legend');
+
+    div.style.background = 'white';
+    div.style.padding = '10px';
+    div.style.border = '1px solid #ccc';
+    div.style.borderRadius = '5px';
+
+    div.innerHTML =
+        '<strong>Difficulty</strong><br>' +
+        '<span style="color:green;">■</span> Easy<br>' +
+        '<span style="color:orange;">■</span> Mild<br>' +
+        '<span style="color:red;">■</span> Tough<br>' +
+        '<span style="color:purple;">■</span> Epic';
+
+    return div;
 };
-// htmlspecialchars converts & to "&amp;"; maybe unnecessarily, and maybe 3x
-var ampersandRegex = /&(?:amp;){1,3}/g
-var layer = L.ajaxGeoJson(src.replace(ampersandRegex, '&'), {
-    type: 'json',
-    style : layerStyle,
-    onEachFeature : onEachFeature,
-    pointToLayer: pointToLayer
-});
-var fitbounds = 0;
-var circleMarker = 0;
-var popup_text = window.WPLeafletMapPlugin.unescape("&lt;br /&gt;&lt;br&gt;&lt;strong&gt;Danasan Falls Trail Loop&lt;/strong&gt;&lt;br /&gt;&lt;br&gt;Completed: June 2026&lt;br /&gt;&lt;br&gt;&lt;a href=&quot;https://youtube.com/YOUR_VIDEO_URL&quot; target=&quot;_blank&quot;&gt;Watch Video&lt;/a&gt;&lt;br /&gt;&lt;br&gt;");
-var popup_property = "";
-var table_view = 0;
-var group = window.WPLeafletMapPlugin.getCurrentGroup();
-var markerOptions = window.WPLeafletMapPlugin.getIconOptions({});
-layer.addTo( group );
-window.WPLeafletMapPlugin.geojsons.push( layer );
-if (fitbounds) {
-    layer.on('ready', function () {
-        this.map.fitBounds( this.getBounds() );
+
+legend.addTo(map);
+
+        L.tileLayer(
+            'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            {
+                attribution: '© OpenStreetMap contributors'
+            }
+        ).addTo(map);
+
+        var trails = [{"title":"Alpha Trail Loop","geojson":"\/wp-content\/uploads\/trails\/saturday-morning-hiking.geojson","article":"https:\/\/beesayatv.pages.dev\/the-alpaco-trail-loop-a-quiet-day-exploring-veloso-lake-and-the-countryside-of-naga\/","youtube":"https:\/\/www.youtube.com\/watch?v=URf-EO02OG8","difficulty":"mild"},{"title":"Danasan Trail Loop","geojson":"\/wp-content\/uploads\/trails\/danasan-trail-loop.geojson","article":"https:\/\/www.google.com","youtube":"https:\/\/www.google.com","difficulty":"mild"}];
+
+        var allLayers = [];
+
+        function getTrailColor(difficulty) {
+
+            switch ((difficulty || '').toLowerCase()) {
+
+                case 'easy':
+                    return 'green';
+
+                case 'mild':
+                    return 'orange';
+
+                case 'tough':
+                    return 'red';
+
+                case 'epic':
+                    return 'purple';
+
+                default:
+                    return 'blue';
+            }
+        }
+
+        trails.forEach(function(trail) {
+
+            fetch(trail.geojson)
+                .then(response => response.json())
+                .then(data => {
+
+                    var color = getTrailColor(trail.difficulty);
+
+                    var layer = L.geoJSON(data, {
+                        style: {
+                            color: color,
+                            weight: 5
+                        }
+                    }).addTo(map);
+
+                    var popupHtml =
+                        '<h3 style="margin:0 0 10px 0;">' +
+                        trail.title +
+                        '</h3>' +
+
+                       '<p><strong>Difficulty:</strong> ' +
+(
+    trail.difficulty
+        ? trail.difficulty.charAt(0).toUpperCase() +
+          trail.difficulty.slice(1)
+        : 'Unknown'
+) +
+'</p>';
+
+                    if (trail.article) {
+                        popupHtml +=
+                            '<p><a href="' +
+                            trail.article +
+                            '" target="_blank">Trail Guide</a></p>';
+                    }
+
+                    if (trail.youtube) {
+                        popupHtml +=
+                            '<p><a href="' +
+                            trail.youtube +
+                            '" target="_blank">Watch Video</a></p>';
+                    }
+
+                    layer.bindPopup(popupHtml);
+
+                    allLayers.push(layer);
+
+                    if (allLayers.length === trails.length) {
+
+                        var group = L.featureGroup(allLayers);
+
+                        map.fitBounds(group.getBounds());
+
+                    }
+
+                })
+                .catch(error => {
+                    console.error(
+                        'Error loading',
+                        trail.geojson,
+                        error
+                    );
+                });
+
+        });
+
     });
-}
-function layerStyle (feature) {
-    var props = feature.properties || {};
-    var style = {};
-    function camelFun (_, first_letter) {
-        return first_letter.toUpperCase();
-    };
-    for (var key in props) {
-        if (key.match('-')) {
-            var camelcase = key.replace(/-(\w)/, camelFun);
-            style[ camelcase ] = props[ key ];
-        }
-        // rewrite style keys from geojson.io
-        if (rewrite_keys[ key ]) {
-            style[ rewrite_keys[ key ] ] = props[ key ];
-        }
-    }
-    return L.Util.extend(style, default_style);
-}
-function onEachFeature (feature, layer) {
-    var props = feature.properties || {};
-    var text;
-    if (table_view) {
-        text = window.WPLeafletMapPlugin.propsToTable(props);
-    } else {
-        text = popup_property
-            ? props[ popup_property ]
-            : window.WPLeafletMapPlugin.template(
-                popup_text, 
-                feature.properties
-            );
-    }
-    if (text) {
-        layer.bindPopup( text );
-    }
-}
-    function pointToLayer (feature, latlng) {
-    if (circleMarker) {
-        return L.circleMarker(latlng);
-    }
-    return L.marker(latlng, markerOptions);
-}});</script>
-<script>
-window.WPLeafletMapPlugin = window.WPLeafletMapPlugin || [];
-window.WPLeafletMapPlugin.push(function WPLeafletjsonShortcode() {/*<script>*/
-var src = '/wp-content/uploads/trails/lutao-uling-wikiloc.geojson';
-var default_style = {};
-var rewrite_keys = {
-    stroke : 'color',
-    'stroke-width' : 'weight',
-    'stroke-opacity' : 'opacity',
-    fill : 'fillColor',
-    'fill-opacity' : 'fillOpacity',
-};
-// htmlspecialchars converts & to "&amp;"; maybe unnecessarily, and maybe 3x
-var ampersandRegex = /&(?:amp;){1,3}/g
-var layer = L.ajaxGeoJson(src.replace(ampersandRegex, '&'), {
-    type: 'json',
-    style : layerStyle,
-    onEachFeature : onEachFeature,
-    pointToLayer: pointToLayer
-});
-var fitbounds = 0;
-var circleMarker = 0;
-var popup_text = window.WPLeafletMapPlugin.unescape("&lt;br /&gt;&lt;br&gt;&lt;strong&gt;Tabunan Ridge Trail&lt;/strong&gt;&lt;br /&gt;&lt;br&gt;Planned Route&lt;br /&gt;&lt;br&gt;&lt;a href=&quot;https://youtube.com/YOUR_VIDEO_URL&quot; target=&quot;_blank&quot;&gt;Watch Video&lt;/a&gt;&lt;br /&gt;&lt;br&gt;");
-var popup_property = "";
-var table_view = 0;
-var group = window.WPLeafletMapPlugin.getCurrentGroup();
-var markerOptions = window.WPLeafletMapPlugin.getIconOptions({});
-layer.addTo( group );
-window.WPLeafletMapPlugin.geojsons.push( layer );
-if (fitbounds) {
-    layer.on('ready', function () {
-        this.map.fitBounds( this.getBounds() );
-    });
-}
-function layerStyle (feature) {
-    var props = feature.properties || {};
-    var style = {};
-    function camelFun (_, first_letter) {
-        return first_letter.toUpperCase();
-    };
-    for (var key in props) {
-        if (key.match('-')) {
-            var camelcase = key.replace(/-(\w)/, camelFun);
-            style[ camelcase ] = props[ key ];
-        }
-        // rewrite style keys from geojson.io
-        if (rewrite_keys[ key ]) {
-            style[ rewrite_keys[ key ] ] = props[ key ];
-        }
-    }
-    return L.Util.extend(style, default_style);
-}
-function onEachFeature (feature, layer) {
-    var props = feature.properties || {};
-    var text;
-    if (table_view) {
-        text = window.WPLeafletMapPlugin.propsToTable(props);
-    } else {
-        text = popup_property
-            ? props[ popup_property ]
-            : window.WPLeafletMapPlugin.template(
-                popup_text, 
-                feature.properties
-            );
-    }
-    if (text) {
-        layer.bindPopup( text );
-    }
-}
-    function pointToLayer (feature, latlng) {
-    if (circleMarker) {
-        return L.circleMarker(latlng);
-    }
-    return L.marker(latlng, markerOptions);
-}});</script>
+    </script>
 
-
-
-<p class="wp-block-paragraph"></p>
+    
             </div>
         </article>
         
@@ -309,10 +288,6 @@ var bloggerly_script_vars = {"dark_mode":"Dark Mode","light_mode":"Light Mode","
 <script id="bloggerly-theme-js-js" src="/wp-content/themes/bloggerly/assets/js/theme.js?ver=1.0.5.1782171480"></script>
 <script id="leaflet_js-js" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script id="wp_leaflet_map-js" src="/wp-content/plugins/leaflet-map/scripts/construct-leaflet-map.min.js?ver=3.4.6"></script>
-<script id="jquery-core-js" src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
-<script id="jquery-migrate-js" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
-<script id="tmcw_togeojson-js" src="https://unpkg.com/@mapbox/togeojson@0.16.0/togeojson.js?ver=3.4.6"></script>
-<script id="leaflet_ajax_geojson_js-js" src="/wp-content/plugins/leaflet-map/scripts/leaflet-ajax-geojson.min.js?ver=3.4.6"></script>
 <script id="wp-emoji-settings" type="application/json">
 {"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"/wp-includes/js/wp-emoji-release.min.js?ver=7.0"}}
 </script>
