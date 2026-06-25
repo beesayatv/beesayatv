@@ -249,3 +249,70 @@ MOBILE READING EXPERIENCE
         line-height: 1.9;
     }
 }
+
+/* ==================================================
+TRAIL SUMMARY
+================================================== */
+
+.beesayatv-trail-card{
+    background:var(--bg-card);
+    border:1px solid var(--border-color);
+    border-radius:18px;
+    padding:24px;
+    margin:35px 0;
+}
+
+.beesayatv-trail-title{
+    margin:0 0 18px;
+    font-size:1rem;
+    font-weight:700;
+    color:var(--text-color);
+}
+
+.beesayatv-trail-badges{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:26px;
+}
+
+.beesayatv-pill{
+    display:inline-flex;
+    align-items:center;
+    padding:8px 15px;
+    border-radius:999px;
+    background:#f7f4eb;
+    border:1px solid var(--border-color);
+    font-size:.92rem;
+    font-weight:600;
+    color:var(--text-color);
+}
+
+.difficulty-easy{
+    background:#dff4df;
+    color:#1b5e20;
+    font-weight:700;
+}
+
+.difficulty-mild{
+    background:#ffe2b5;
+    color:#925400;
+    font-weight:700;
+}
+
+.difficulty-tough{
+    background:#ffd8d8;
+    color:#9b1c1c;
+    font-weight:700;
+}
+
+.difficulty-epic{
+    background:#eadcff;
+    color:#5b2d90;
+    font-weight:700;
+}
+
+.beesayatv-trail-card .leaflet-container{
+    border-radius:14px;
+    overflow:hidden;
+}
