@@ -65,13 +65,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 <link rel="stylesheet" id="bloggerly-style-css" href="/wp-content/themes/bloggerly-child/style.css?ver=1.0.5.1782171480" media="all">
 <link rel="stylesheet" id="chld_thm_cfg_parent-css" href="/wp-content/themes/bloggerly/style.css?ver=7.0" media="all">
-<link rel="stylesheet" id="beesayatv-child-style-css" href="/wp-content/themes/bloggerly-child/style.css?ver=1782348033" media="all">
+<link rel="stylesheet" id="beesayatv-child-style-css" href="/wp-content/themes/bloggerly-child/style.css?ver=1782357972" media="all">
 <link rel="https://api.w.org/" href="/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/posts/93"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
 <meta name="generator" content="WordPress 7.0">
 <link rel="canonical" href="/the-alpaco-trail-loop-a-quiet-day-exploring-veloso-lake-and-the-countryside-of-naga/">
 <link rel="shortlink" href="/?p=93">
-<link rel="stylesheet" id="leaflet_stylesheet-css" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" media="">
-
 </head>
 
 <body class="wp-singular post-template-default single single-post postid-93 single-format-standard wp-embed-responsive wp-theme-bloggerly wp-child-theme-bloggerly-child">
@@ -95,13 +93,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 				<nav id="site-navigation" class="main-navigation" aria-label="Primary menu" aria-hidden="true">
 					<ul id="primary-menu" class="menu"><li id="menu-item-22" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-22"><a href="/">Home</a></li>
-<li id="menu-item-57" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-57"><a href="#">Trail Locations</a>
+<li id="menu-item-57" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-57"><a href="#">Location</a>
 <ul class="sub-menu">
+	<li id="menu-item-180" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-180"><a href="/category/trail-locations/danao/">Danao</a></li>
 	<li id="menu-item-58" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-58"><a href="/category/trail-locations/naga/">Naga</a></li>
 </ul>
 </li>
-<li id="menu-item-97" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-97"><a href="/">Atlas</a></li>
-<li id="menu-item-33" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-33"><a href="/category/guides/">Guides</a></li>
+<li id="menu-item-97" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97"><a href="/trail-atlas/">Atlas</a></li>
 </ul>					<button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode">
 						Dark Mode					</button>
 				</nav>
@@ -120,98 +118,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 			</header>
 
 			<div class="entry-content">
-				<div class="beesayatv-trail-card"><h3 class="beesayatv-trail-title">At a Glance</h3><div class="beesayatv-trail-badges"><span class="beesayatv-pill difficulty-mild">Mild</span><span class="beesayatv-pill">12km</span><span class="beesayatv-pill">125m gain</span><span class="beesayatv-pill">3-4 hrs</span><span class="beesayatv-pill">Loop</span></div><div class="leaflet-map WPLeafletMap" style="height:250px; width:100%;"></div><script>
-window.WPLeafletMapPlugin = window.WPLeafletMapPlugin || [];
-window.WPLeafletMapPlugin.push(function WPLeafletMapShortcode() {/*<script>*/
-var baseUrl = atob('aHR0cHM6Ly90aWxlLm9wZW5zdHJlZXRtYXAub3JnL3t6fS97eH0ve3l9LnBuZw==');
-var base = (!baseUrl && window.MQ) ?
-    window.MQ.mapLayer() : L.tileLayer(baseUrl,
-        L.Util.extend({}, {
-            detectRetina: 0,
-        },
-        {"subdomains":"abc","noWrap":false,"maxZoom":19}        )
-    );
-    var options = L.Util.extend({}, {
-        layers: [base],
-        attributionControl: false
-    },
-    {"zoomControl":true,"scrollWheelZoom":true,"doubleClickZoom":true,"fitBounds":true,"minZoom":0,"maxZoom":19,"maxBounds":null,"attribution":"<a href=\"http:\/\/leafletjs.com\" title=\"A JS library for interactive maps\">Leaflet<\/a>; \u00a9 <a href=\"http:\/\/www.openstreetmap.org\/copyright\">OpenStreetMap<\/a> contributors"},
-    {});
-window.WPLeafletMapPlugin.createMap(options).setView([44.67,-63.61],12);});</script><script>
-window.WPLeafletMapPlugin = window.WPLeafletMapPlugin || [];
-window.WPLeafletMapPlugin.push(function WPLeafletjsonShortcode() {/*<script>*/
-var src = '/wp-content/uploads/trails/saturday-morning-hiking.geojson';
-var default_style = {"color":"orange","weight":5,"opacity":0.80000000000000004};
-var rewrite_keys = {
-    stroke : 'color',
-    'stroke-width' : 'weight',
-    'stroke-opacity' : 'opacity',
-    fill : 'fillColor',
-    'fill-opacity' : 'fillOpacity',
-};
-// htmlspecialchars converts & to "&amp;"; maybe unnecessarily, and maybe 3x
-var ampersandRegex = /&(?:amp;){1,3}/g
-var layer = L.ajaxGeoJson(src.replace(ampersandRegex, '&'), {
-    type: 'json',
-    style : layerStyle,
-    onEachFeature : onEachFeature,
-    pointToLayer: pointToLayer
-});
-var fitbounds = 0;
-var circleMarker = 0;
-var popup_text = window.WPLeafletMapPlugin.unescape("");
-var popup_property = "";
-var table_view = 0;
-var group = window.WPLeafletMapPlugin.getCurrentGroup();
-var markerOptions = window.WPLeafletMapPlugin.getIconOptions({});
-layer.addTo( group );
-window.WPLeafletMapPlugin.geojsons.push( layer );
-if (fitbounds) {
-    layer.on('ready', function () {
-        this.map.fitBounds( this.getBounds() );
-    });
-}
-function layerStyle (feature) {
-    var props = feature.properties || {};
-    var style = {};
-    function camelFun (_, first_letter) {
-        return first_letter.toUpperCase();
-    };
-    for (var key in props) {
-        if (key.match('-')) {
-            var camelcase = key.replace(/-(\w)/, camelFun);
-            style[ camelcase ] = props[ key ];
-        }
-        // rewrite style keys from geojson.io
-        if (rewrite_keys[ key ]) {
-            style[ rewrite_keys[ key ] ] = props[ key ];
-        }
-    }
-    return L.Util.extend(style, default_style);
-}
-function onEachFeature (feature, layer) {
-    var props = feature.properties || {};
-    var text;
-    if (table_view) {
-        text = window.WPLeafletMapPlugin.propsToTable(props);
-    } else {
-        text = popup_property
-            ? props[ popup_property ]
-            : window.WPLeafletMapPlugin.template(
-                popup_text, 
-                feature.properties
-            );
-    }
-    if (text) {
-        layer.bindPopup( text );
-    }
-}
-    function pointToLayer (feature, latlng) {
-    if (circleMarker) {
-        return L.circleMarker(latlng);
-    }
-    return L.marker(latlng, markerOptions);
-}});</script></div>
+				
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe title="Solo Hiking 12km on Alpaco Trail Loop | Alpaco, Naga City | 2026 GPX" width="800" height="450" src="https://www.youtube.com/embed/URf-EO02OG8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
 
 
 
@@ -227,11 +137,11 @@ function onEachFeature (feature, layer) {
 
 
 
-<figure class="wp-block-image size-large"><img fetchpriority="high" decoding="async" width="1024" height="576" src="/wp-content/uploads/2026/06/IMG_6077_202606200817014.MP4_snapshot_00.07.169-1024x576.jpg" alt="" class="wp-image-87" srcset="/wp-content/uploads/2026/06/IMG_6077_202606200817014.MP4_snapshot_00.07.169-1024x576.jpg 1024w, /wp-content/uploads/2026/06/IMG_6077_202606200817014.MP4_snapshot_00.07.169-300x169.jpg 300w, /wp-content/uploads/2026/06/IMG_6077_202606200817014.MP4_snapshot_00.07.169-768x432.jpg 768w, /wp-content/uploads/2026/06/IMG_6077_202606200817014.MP4_snapshot_00.07.169-1536x864.jpg 1536w, /wp-content/uploads/2026/06/IMG_6077_202606200817014.MP4_snapshot_00.07.169-2048x1152.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px"></figure>
-
-
-
 <p class="wp-block-paragraph">Before this hike, I assumed Veloso Lake would be the main attraction. After completing the loop, it felt more like a side quest than the destination itself. The real experience was the journey through the surrounding communities and farmlands.</p>
+
+
+
+<figure class="wp-block-image size-large"><img fetchpriority="high" decoding="async" width="1024" height="576" src="/wp-content/uploads/2026/06/IMG_6077_202606200817014.MP4_snapshot_00.07.169-1024x576.jpg" alt="" class="wp-image-87" srcset="/wp-content/uploads/2026/06/IMG_6077_202606200817014.MP4_snapshot_00.07.169-1024x576.jpg 1024w, /wp-content/uploads/2026/06/IMG_6077_202606200817014.MP4_snapshot_00.07.169-300x169.jpg 300w, /wp-content/uploads/2026/06/IMG_6077_202606200817014.MP4_snapshot_00.07.169-768x432.jpg 768w, /wp-content/uploads/2026/06/IMG_6077_202606200817014.MP4_snapshot_00.07.169-1536x864.jpg 1536w, /wp-content/uploads/2026/06/IMG_6077_202606200817014.MP4_snapshot_00.07.169-2048x1152.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px"></figure>
 
 
 
@@ -239,19 +149,15 @@ function onEachFeature (feature, layer) {
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="576" src="/wp-content/uploads/2026/06/IMG_6062_202606201039018.MP4_snapshot_00.01.469-1024x576.jpg" alt="" class="wp-image-88" srcset="/wp-content/uploads/2026/06/IMG_6062_202606201039018.MP4_snapshot_00.01.469-1024x576.jpg 1024w, /wp-content/uploads/2026/06/IMG_6062_202606201039018.MP4_snapshot_00.01.469-300x169.jpg 300w, /wp-content/uploads/2026/06/IMG_6062_202606201039018.MP4_snapshot_00.01.469-768x432.jpg 768w, /wp-content/uploads/2026/06/IMG_6062_202606201039018.MP4_snapshot_00.01.469-1536x864.jpg 1536w, /wp-content/uploads/2026/06/IMG_6062_202606201039018.MP4_snapshot_00.01.469-2048x1152.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px"></figure>
-
-
-
 <p class="wp-block-paragraph">One thing I quickly noticed was the lack of shade. Large portions of the hike were fully exposed, so starting early and carrying enough water is important. Fortunately, the weather during my hike was cloudy, which made the conditions much more comfortable.</p>
 
 
 
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="576" src="/wp-content/uploads/2026/06/IMG_6062_202606201039018.MP4_snapshot_00.01.469-1024x576.jpg" alt="" class="wp-image-88" srcset="/wp-content/uploads/2026/06/IMG_6062_202606201039018.MP4_snapshot_00.01.469-1024x576.jpg 1024w, /wp-content/uploads/2026/06/IMG_6062_202606201039018.MP4_snapshot_00.01.469-300x169.jpg 300w, /wp-content/uploads/2026/06/IMG_6062_202606201039018.MP4_snapshot_00.01.469-768x432.jpg 768w, /wp-content/uploads/2026/06/IMG_6062_202606201039018.MP4_snapshot_00.01.469-1536x864.jpg 1536w, /wp-content/uploads/2026/06/IMG_6062_202606201039018.MP4_snapshot_00.01.469-2048x1152.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px"></figure>
+
+
+
 <p class="wp-block-paragraph">The people I met along the route were welcoming and approachable. I ended up having several pleasant conversations throughout the day, and those interactions became one of the highlights of the hike. Experiences like these are one of the reasons I enjoy exploring lesser-known trails. The route becomes more than a line on a map—it becomes a chance to learn a little about the places and communities you pass through.</p>
-
-
-
-<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="576" src="/wp-content/uploads/2026/06/IMG_6025_202606201028011.MOV_snapshot_00.08.461-1024x576.jpg" alt="" class="wp-image-82" srcset="/wp-content/uploads/2026/06/IMG_6025_202606201028011.MOV_snapshot_00.08.461-1024x576.jpg 1024w, /wp-content/uploads/2026/06/IMG_6025_202606201028011.MOV_snapshot_00.08.461-300x169.jpg 300w, /wp-content/uploads/2026/06/IMG_6025_202606201028011.MOV_snapshot_00.08.461-768x432.jpg 768w, /wp-content/uploads/2026/06/IMG_6025_202606201028011.MOV_snapshot_00.08.461-1536x864.jpg 1536w, /wp-content/uploads/2026/06/IMG_6025_202606201028011.MOV_snapshot_00.08.461-2048x1152.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px"></figure>
 
 
 
@@ -260,6 +166,10 @@ function onEachFeature (feature, layer) {
 
 
 <p class="wp-block-paragraph">Several homes along the route had territorial dogs, and most were quick to let me know I was entering their territory. Nothing serious happened, but I was glad to have a hiking stick and gave them plenty of space whenever possible.</p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="576" src="/wp-content/uploads/2026/06/IMG_6067_202606200903034.MP4_snapshot_00.04.147-1024x576.jpg" alt="" class="wp-image-19" srcset="/wp-content/uploads/2026/06/IMG_6067_202606200903034.MP4_snapshot_00.04.147-1024x576.jpg 1024w, /wp-content/uploads/2026/06/IMG_6067_202606200903034.MP4_snapshot_00.04.147-300x169.jpg 300w, /wp-content/uploads/2026/06/IMG_6067_202606200903034.MP4_snapshot_00.04.147-768x432.jpg 768w, /wp-content/uploads/2026/06/IMG_6067_202606200903034.MP4_snapshot_00.04.147-1536x864.jpg 1536w, /wp-content/uploads/2026/06/IMG_6067_202606200903034.MP4_snapshot_00.04.147-2048x1152.jpg 2048w" sizes="auto, (max-width: 1024px) 100vw, 1024px"></figure>
 
 
 
@@ -272,12 +182,6 @@ function onEachFeature (feature, layer) {
 
 
 <p class="wp-block-paragraph">And sometimes, that’s more than enough.</p>
-
-
-
-<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
-<iframe loading="lazy" title="Solo Hiking 12km on Alpaco Trail Loop | Alpaco, Naga City | 2026 GPX" width="800" height="450" src="https://www.youtube.com/embed/URf-EO02OG8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div></figure>
 
 
 
@@ -338,12 +242,6 @@ var bloggerly_script_vars = {"dark_mode":"Dark Mode","light_mode":"Light Mode","
 </script>
 <script id="bloggerly-theme-js-js" src="/wp-content/themes/bloggerly/assets/js/theme.js?ver=1.0.5.1782171480"></script>
 <script async data-wp-strategy="async" fetchpriority="low" id="comment-reply-js" src="/wp-includes/js/comment-reply.min.js?ver=7.0"></script>
-<script id="leaflet_js-js" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script id="wp_leaflet_map-js" src="/wp-content/plugins/leaflet-map/scripts/construct-leaflet-map.min.js?ver=3.4.6"></script>
-<script id="jquery-core-js" src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
-<script id="jquery-migrate-js" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
-<script id="tmcw_togeojson-js" src="https://unpkg.com/@mapbox/togeojson@0.16.0/togeojson.js?ver=3.4.6"></script>
-<script id="leaflet_ajax_geojson_js-js" src="/wp-content/plugins/leaflet-map/scripts/leaflet-ajax-geojson.min.js?ver=3.4.6"></script>
 <script id="wp-emoji-settings" type="application/json">
 {"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"/wp-includes/js/wp-emoji-release.min.js?ver=7.0"}}
 </script>
