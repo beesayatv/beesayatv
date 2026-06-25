@@ -582,8 +582,52 @@ Route Thumbnail
 }
 
 .beesaya-route-link{
+ 	cursor:pointer;
+	position:relative;
     display:block;
     text-decoration:none;
+    overflow:hidden;
+    border-radius:16px;
+}
+
+.beesaya-route-link svg{
+    transition:transform .25s ease;
+}
+
+.beesaya-route-link:hover svg{
+    transform:scale(1.02);
+}
+
+.beesaya-open-map{
+    position:absolute;
+    top:10px;
+    right:10px;
+
+    padding:6px 10px;
+
+    background:rgba(245,242,232,.95);
+
+    border:1px solid #d8d2bf;
+
+    border-radius:999px;
+
+    color:#4D533F;
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+    line-height:1;
+
+    transition:.2s ease;
+}
+
+.beesaya-route-link:hover .beesaya-open-map{
+
+    background:#4D533F;
+
+    color:#fff;
+
 }
 
 .beesaya-route-map svg{
