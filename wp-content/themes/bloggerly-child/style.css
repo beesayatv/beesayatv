@@ -350,3 +350,212 @@ display:block;
 margin-top:12px;
 color:var(--muted-color);
 }
+
+
+/* ===========================================
+   BeesayaTV Trail Information
+=========================================== */
+
+.beesaya-snapshot{
+
+    background:#fbf9f2;
+    border:1px solid #e8e2d2;
+    border-radius:10px;
+
+    padding:20px 24px;
+
+    margin:35px 0;
+
+}
+
+.beesaya-title{
+
+    margin:0 0 8px;
+
+    font-size:1.35rem;
+
+    font-weight:700;
+
+}
+
+.beesaya-title::after{
+
+    content:"";
+
+    display:block;
+
+    width:60px;
+
+    height:2px;
+
+    background:#d9cda9;
+
+    margin-top:8px;
+
+}
+
+.beesaya-difficulty{
+
+    display:inline-block;
+
+    padding:4px 12px;
+
+    border-radius:999px;
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.5px;
+
+    margin:8px 0 18px;
+
+}
+
+/* Difficulty Colors */
+
+.beesaya-easy{
+
+    background:#dff6df;
+    color:#2f6b2f;
+
+}
+
+.beesaya-mild{
+
+    background:#fff4c7;
+    color:#9b6b00;
+
+}
+
+.beesaya-tough{
+
+    background:#ffe2d7;
+    color:#b54828;
+
+}
+
+.beesaya-epic{
+
+    background:#eddcff;
+    color:#6d3fb3;
+
+}
+
+/* ===========================================
+   Snapshot Rows
+=========================================== */
+
+.beesaya-grid{
+
+    margin-bottom:22px;
+
+}
+
+.beesaya-grid div{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:9px 0;
+
+    border-bottom:1px solid #ece7db;
+
+}
+
+.beesaya-grid div:last-child{
+
+    border-bottom:none;
+
+}
+
+.beesaya-grid span{
+
+    color:#666;
+
+    font-size:.95rem;
+
+}
+
+.beesaya-grid strong{
+
+    color:#222;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+}
+
+/* ===========================================
+   Rating Reasons
+=========================================== */
+
+.beesaya-rating{
+
+    margin-top:10px;
+
+}
+
+.beesaya-rating h3{
+
+    margin:0 0 12px;
+
+    font-size:1.15rem;
+
+    font-weight:700;
+
+}
+
+.beesaya-reason{
+
+    padding:8px 0;
+
+    line-height:1.5;
+
+    border-bottom:1px solid #ece7db;
+
+}
+
+.beesaya-reason:last-child{
+
+    border-bottom:none;
+
+}
+
+/* ===========================================
+   Mobile
+=========================================== */
+
+@media (max-width:700px){
+
+    .beesaya-snapshot{
+
+        padding:18px;
+
+    }
+
+}
+
+/* GPX Link */
+
+.beesaya-grid strong a{
+
+    color:#4d533f;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+}
+
+.beesaya-grid strong a:hover{
+
+    text-decoration:underline;
+
+}
