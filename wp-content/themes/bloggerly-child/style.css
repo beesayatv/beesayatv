@@ -758,3 +758,40 @@ Route Thumbnail
 .post-card .entry-content{
     display:none;
 }
+
+
+/* ==================================================
+FOOTER
+================================================== */
+
+.site-footer {
+    margin-top: 80px;
+    padding: 40px 20px;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.site-info {
+    margin-bottom: 8px;
+    color: var(--muted-color);
+    font-size: 1.05rem;
+}
+
+.footer-links {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    margin-top: 14px;
+    font-size: 0.85rem;
+    color: var(--muted-color);
+    opacity: 0.9;   /* was 0.8 */
+}
