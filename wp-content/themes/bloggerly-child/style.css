@@ -795,3 +795,252 @@ FOOTER
     color: var(--muted-color);
     opacity: 0.9;   /* was 0.8 */
 }
+
+/* ===== Beesayatv Homepage ===== */
+
+.homepage{padding:60px 0 80px;}
+
+.homepage-hero{
+display:grid;
+grid-template-columns:minmax(0,55fr) minmax(0,45fr);
+gap:40px;
+align-items:start;
+margin-bottom:60px;
+}
+
+.homepage-hero h1{
+    font-size:2.3rem;
+    line-height:1.2;
+    margin-bottom:24px;
+    font-weight:700;
+}
+
+.homepage-hero p{
+font-size:1.05rem;
+line-height:1.8;
+margin-bottom:24px;
+}
+
+.homepage-hero__image img{
+width:100%;
+display:block;
+border-radius:16px;
+aspect-ratio:16/9;
+object-fit:cover;
+}
+
+.homepage-explore h2{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+margin:0 0 35px;
+}
+
+.homepage-explore h2 span{
+height:1px;
+background:#ddd;
+width:120px;
+display:block;
+}
+
+.homepage-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.homepage-card{
+display:block;
+text-decoration:none;
+color:inherit;
+background:#fff;
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 4px 16px rgba(0,0,0,.08);
+transition:.2s;
+}
+
+.homepage-card:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 26px rgba(0,0,0,.12);
+}
+
+.homepage-card img{
+width:100%;
+aspect-ratio:16/9;
+object-fit:cover;
+display:block;
+}
+
+.homepage-card .icon{
+width:84px;
+height:84px;
+border-radius:50%;
+background:#f5f2e8;
+margin:-42px auto 16px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:2rem;
+position:relative;
+}
+
+.homepage-card h3{margin-bottom:12px;}
+.homepage-card span{font-weight:600;}
+
+.homepage-card-body{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    height:100%;
+    padding:0 22px 24px;
+    text-align:center;
+}
+
+.homepage-card p{
+    flex:1;
+    color:#666;
+}
+
+.homepage-card span{
+    margin-top:auto;
+    font-weight:600;
+}
+
+
+
+.homepage-atlas{
+margin-top:45px;
+background:#fff;
+border-radius:14px;
+padding:30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 4px 16px rgba(0,0,0,.06);
+gap:20px;
+}
+
+@media(max-width:1024px){
+.homepage-grid{grid-template-columns:repeat(2,1fr);}
+}
+
+@media(max-width:768px){
+.homepage-hero{grid-template-columns:1fr;}
+.homepage-hero h1{font-size:2.2rem;}
+.homepage-grid{grid-template-columns:1fr;}
+.homepage-explore h2 span{width:50px;}
+.homepage-atlas{flex-direction:column;align-items:flex-start;}
+}
+
+
+.homepage-buttons{
+    display:flex;
+    gap:14px;
+    margin-top:28px;
+}
+
+.homepage-buttons a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:12px 22px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.2s;
+}
+
+.homepage-buttons a:first-child{
+
+    background:#556B3B;
+    color:#fff;
+
+}
+
+.homepage-buttons a:first-child:hover{
+
+    background:#44572f;
+
+}
+
+.homepage-buttons a:last-child{
+
+    border:1px solid #556B3B;
+    color:#556B3B;
+    background:#fff;
+
+}
+
+.homepage-buttons a:last-child:hover{
+
+    background:#f6f4e9;
+
+}
+
+.homepage-atlas .button{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:12px 22px;
+    border-radius:10px;
+    background:#556B3B;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    transition:.2s;
+
+}
+
+.homepage-atlas .button:hover{
+
+    background:#44572f;
+    color:#fff;
+
+}
+
+
+@media (max-width:768px){
+
+    .homepage-hero{
+        grid-template-columns:1fr;
+        text-align:center;
+		gap:5px;
+    }
+
+    .homepage-hero h1{
+        font-size:1.7rem;
+        line-height:1.2;
+    }
+
+    .homepage-buttons{
+        justify-content:center;
+    }
+
+    .homepage-grid{
+        grid-template-columns:1fr;
+    }
+
+    .homepage-atlas{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+	.homepage-hero__image{
+
+    order:-1;
+	}
+
+	.homepage{
+
+    padding-top:5px;
+    padding-bottom:5px;
+	}
+	
+	.homepage-explore{
+    margin-top:30px;
+	}
+
+}
