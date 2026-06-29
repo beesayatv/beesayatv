@@ -1044,3 +1044,8 @@ gap:20px;
 	}
 
 }
+
+chat-bubble-snippet{
+    --search-snippet-primary-color:#6E7359;
+    --search-snippet-primary-hover:#4D533F;
+}
