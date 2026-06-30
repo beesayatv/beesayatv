@@ -1044,3 +1044,29 @@ gap:20px;
 	}
 
 }
+
+/* Trail Atlas popup */
+
+.leaflet-popup-content{
+    width:220px !important;
+    margin:14px 16px;
+}
+
+.leaflet-popup-content h3{
+    margin:0 0 10px;
+    font-size:16px;
+    line-height:1.35;
+
+    white-space:normal;
+    overflow-wrap:anywhere;
+    word-break:break-word;
+}
+
+.leaflet-popup-content p{
+    margin:8px 0;
+}
+
+.leaflet-popup-content a{
+    display:block;
+    margin-top:8px;
+}
