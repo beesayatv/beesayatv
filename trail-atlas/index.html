@@ -132,7 +132,7 @@ margin:24px 0;
 <link rel="stylesheet" id="beesayatv-cards-css" href="https://www.beesayatv.com/wp-content/themes/bloggerly-child/css/cards.css?ver=1782639917" media="all">
 <link rel="stylesheet" id="bloggerly-style-css" href="https://www.beesayatv.com/wp-content/themes/bloggerly-child/style.css?ver=1.0.5.1782171480" media="all">
 <link rel="stylesheet" id="chld_thm_cfg_parent-css" href="https://www.beesayatv.com/wp-content/themes/bloggerly/style.css?ver=7.0" media="all">
-<link rel="stylesheet" id="beesayatv-child-style-css" href="https://www.beesayatv.com/wp-content/themes/bloggerly-child/style.css?ver=1782809556" media="all">
+<link rel="stylesheet" id="beesayatv-child-style-css" href="https://www.beesayatv.com/wp-content/themes/bloggerly-child/style.css?ver=1782823562" media="all">
 <link rel="https://api.w.org/" href="https://www.beesayatv.com/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://www.beesayatv.com/wp-json/wp/v2/pages/96"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.beesayatv.com/xmlrpc.php?rsd">
 <meta name="generator" content="WordPress 7.0">
 <link rel="canonical" href="https://www.beesayatv.com/trail-atlas/">
@@ -211,7 +211,7 @@ var base = (!baseUrl && window.MQ) ?
     },
     {"zoomControl":true,"scrollWheelZoom":true,"doubleClickZoom":true,"fitBounds":false,"minZoom":0,"maxZoom":19,"maxBounds":null,"attribution":"<a href=\"http:\/\/leafletjs.com\" title=\"A JS library for interactive maps\">Leaflet<\/a>; \u00a9 <a href=\"http:\/\/www.openstreetmap.org\/copyright\">OpenStreetMap<\/a> contributors"},
     {});
-window.WPLeafletMapPlugin.createMap(options).setView([44.67,-63.61],12);});</script>
+window.WPLeafletMapPlugin.createMap(options).setView([44.67,-63.61],5);});</script>
 
     <div id="beesayatv-test-map" style="height:500px;"></div>
 
@@ -222,8 +222,8 @@ window.WPLeafletMapPlugin.createMap(options).setView([44.67,-63.61],12);});</scr
     poiStyle.innerHTML=`
 .btv-poi-marker{background:none!important;border:none!important;}
 .btv-poi-circle{
-width:36px;
-height:36px;
+width:30px;
+height:30px;
 border-radius:50%;
 display:flex;
 align-items:center;
@@ -233,8 +233,8 @@ border:2px solid #F5F2E8;
 box-shadow:0 2px 6px rgba(0,0,0,.25);
 }
 .btv-poi-circle img{
-width:18px;
-height:18px;
+width:15px;
+height:15px;
 display:block;
 }
 `;
@@ -275,7 +275,7 @@ legend.addTo(map);
         ).addTo(map);
 
         var trails = [{"title":"Alpaco Trail Loop | Alpaco, Naga City | 2026 GPX","geojson":"\/wp-content\/uploads\/trails\/saturday-morning-hiking.geojson","article":"https:\/\/www.beesayatv.com\/trails\/alpaco-trail-loop\/","youtube":"https:\/\/www.youtube.com\/watch?v=URf-EO02OG8","wikiloc":"https:\/\/loc.wiki\/t\/270245328?wa=sc","difficulty":"Mild"},{"title":"Bitlang Trail | Sudlon 1, Cebu City | 2026 GPX","geojson":"\/wp-content\/uploads\/trails\/bitlang-trail-loop.geojson","article":"https:\/\/www.beesayatv.com\/trails\/bitlang-trail-loop\/","youtube":"https:\/\/youtu.be\/tbXVShl_9V4","wikiloc":"https:\/\/loc.wiki\/t\/266819472?wa=sc","difficulty":"Mild"},{"title":"Cabanbanan Community Trail Loop | Camp 8, Toledo City | 2026 GPX","geojson":"\/wp-content\/uploads\/trails\/cabanbanan-community-trail-loop.geojson","article":"https:\/\/www.beesayatv.com\/trails\/cabanbanan-community-trail-loop\/","youtube":"https:\/\/youtu.be\/vdUiQQBGoic","wikiloc":"https:\/\/loc.wiki\/t\/271296184?wa=sc","difficulty":"Mild"},{"title":"Camp 7 Farm Trails | Minglanilla Part 2 | 2026 GPX","geojson":"\/wp-content\/uploads\/trails\/camp-7-farm-trails.geojson","article":"https:\/\/www.beesayatv.com\/trails\/camp-7-farm-trails\/","youtube":"https:\/\/youtu.be\/WTGa1Vw4XzU","wikiloc":"https:\/\/loc.wiki\/t\/264397703?wa=sc","difficulty":"Mild"},{"title":"Camp 7 Farmland Trails | Minglanilla Part 1| 2026 GPX","geojson":"\/wp-content\/uploads\/trails\/camp-7-lubas-farm-trails.geojson","article":"https:\/\/www.beesayatv.com\/trails\/camp-7-lubas-farm-trails\/","youtube":"https:\/\/youtu.be\/Pyn4lHcS1lA","wikiloc":"https:\/\/loc.wiki\/t\/264400659?wa=sc","difficulty":"Easy"},{"title":"Camp 8 Backtrails | Minglanilla Part 3 | 2026 GPX","geojson":"\/wp-content\/uploads\/trails\/ylaya-camp-8.geojson","article":"https:\/\/www.beesayatv.com\/trails\/ylaya-camp-8\/","youtube":"https:\/\/youtu.be\/U7Xwhh78i2A","wikiloc":"https:\/\/loc.wiki\/t\/264393123?wa=sc","difficulty":"Easy"},{"title":"Danasan Falls Trail Loop | Danasan, Danao | 2026 GPX","geojson":"\/wp-content\/uploads\/trails\/danasan-trail-loop.geojson","article":"https:\/\/www.beesayatv.com\/trails\/danasan-trail-loop\/","youtube":"https:\/\/youtu.be\/2PMkqt5Bpgs","wikiloc":"https:\/\/loc.wiki\/t\/269000993?wa=sc","difficulty":"Mild"},{"title":"Malingin Rock | Cotcot River, Liloan | 2026 GPX","geojson":"\/wp-content\/uploads\/trails\/malingin-rock.geojson","article":"https:\/\/www.beesayatv.com\/trails\/malingin-rock\/","youtube":"https:\/\/youtu.be\/6qM2UmwiTTs","wikiloc":"https:\/\/loc.wiki\/t\/266080214?wa=sc","difficulty":"Easy"},{"title":"Mt. Kalatkat: A Gentle Climb with Views That Keep Getting Better","geojson":"\/wp-content\/uploads\/trails\/kalatkat.geojson","article":"https:\/\/www.beesayatv.com\/trails\/kalatkat-trail\/","youtube":"https:\/\/youtu.be\/NGbQ2JYJWNQ","wikiloc":"https:\/\/loc.wiki\/t\/265433777?wa=sc","difficulty":"Easy"},{"title":"Radar Trail | Sudlon 1 \/ Bagakay, Toledo | 2026 GPX","geojson":"\/wp-content\/uploads\/trails\/radar-trail.geojson","article":"https:\/\/www.beesayatv.com\/trails\/radar-trail\/","youtube":"https:\/\/youtu.be\/cJa9RyQ6R0s","wikiloc":"https:\/\/loc.wiki\/t\/267996631?wa=sc","difficulty":"Easy"},{"title":"Toong Forest Trail | Toong, Pardo \/ Mahayahay | 2026 GPX","geojson":"\/wp-content\/uploads\/trails\/toong-forest-trail.geojson","article":"https:\/\/www.beesayatv.com\/trails\/toong-forest-trail\/","youtube":"https:\/\/youtu.be\/nHdTeN47JMo","wikiloc":"https:\/\/loc.wiki\/t\/264271527?wa=sc","difficulty":"Easy"}];
-		var pois = [{"title":"Community Spring","category":"spring","lat":"10.233794700684854","lng":"123.67661939909829","note":"Locals use it for everyday chores."}];
+		var pois = [{"title":"Bagakay Junction","category":"habal-habal","lat":"10.35806","lng":"123.74915","note":"Habal-habal available here."},{"title":"Spring","category":"spring","lat":"10.233794700684854","lng":"123.67661939909829","note":"A concrete water catchment locals use for everyday chores."}];
 
         var allLayers = [];
 		
@@ -285,6 +285,7 @@ function getPoiIcon(category) {
 
     // Default fallback
     var file = "poi.svg";
+    var color = "#9A9D84"; // Default sage
 
     switch ((category || '').toLowerCase()) {
 
@@ -294,6 +295,7 @@ function getPoiIcon(category) {
 
         case "spring":
             file = "spring.svg";
+            color = "#7FA7B8"; // Muted blue
             break;
 
         case "viewpoint":
@@ -312,12 +314,12 @@ function getPoiIcon(category) {
     return L.divIcon({
         className: 'btv-poi-marker',
         html:
-            '<div class="btv-poi-circle">' +
+            '<div class="btv-poi-circle" style="background:' + color + ';">' +
                 '<img decoding="async" src="' + (base + file) + '" alt="">' +
             '</div>',
-        iconSize: [36,36],
-        iconAnchor: [18,18],
-        popupAnchor: [0,-18]
+        iconSize: [30,30],
+        iconAnchor: [15,15],
+        popupAnchor: [0,-15]
     });
 
 }
@@ -402,7 +404,9 @@ function getPoiIcon(category) {
 
                         var group = L.featureGroup(allLayers);
 
-                        map.fitBounds(group.getBounds());
+                         map.fitBounds(group.getBounds());
+
+						map.setZoom(12);
 
                     }
 
