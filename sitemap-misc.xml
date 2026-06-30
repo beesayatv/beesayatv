@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?><?xml-stylesheet type='text/xsl' href='https://www.beesayatv.com/wp-content/plugins/google-sitemap-generator/sitemap.xsl'?><!-- sitemap-generator-url='http://www.arnebrachhold.de/' sitemap-generator-version='4.1.24' -->
-<!-- generated-on='June 30, 2026 7:09 am' -->
+<!-- generated-on='June 30, 2026 7:30 am' -->
 <urlset xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd' xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>	<url>
 		<loc>https://www.beesayatv.com/</loc>
-		<lastmod>2026-06-30T07:08:59+00:00</lastmod>
+		<lastmod>2026-06-30T07:29:16+00:00</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://www.beesayatv.com/sitemap.html</loc>
-		<lastmod>2026-06-30T07:08:59+00:00</lastmod>
+		<lastmod>2026-06-30T07:29:16+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
-</urlset><!-- Request ID: c11937fb7bd038563cc1ef720f1231db; Queries for sitemap: 3; Total queries: 24; Seconds: 0; Memory for sitemap: 1KB; Total memory: 4MB -->
+</urlset><!-- Request ID: 001cc54b3f65bc9e78f0ab22de2e0e55; Queries for sitemap: 3; Total queries: 24; Seconds: 0; Memory for sitemap: 1KB; Total memory: 4MB -->
