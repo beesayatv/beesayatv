@@ -77,7 +77,7 @@ gap:8px;
 padding:8px 8px;
 margin:2px -8px;
 border-radius:8px;
-text-decoration:none !important;
+text-decoration:none!important;
 color:inherit;
 transition:background-color .18s ease,color .18s ease;
 }
@@ -86,7 +86,7 @@ transition:background-color .18s ease,color .18s ease;
 .beesaya-feature-row:hover,
 .beesaya-feature-row:focus,
 .beesaya-feature-row:visited{
-text-decoration:none !important;
+text-decoration:none!important;
 }
 
 .beesaya-feature-row:hover{
@@ -132,7 +132,7 @@ margin:24px 0;
 <link rel="stylesheet" id="beesayatv-cards-css" href="https://www.beesayatv.com/wp-content/themes/bloggerly-child/css/cards.css?ver=1782639917" media="all">
 <link rel="stylesheet" id="bloggerly-style-css" href="https://www.beesayatv.com/wp-content/themes/bloggerly-child/style.css?ver=1.0.5.1782171480" media="all">
 <link rel="stylesheet" id="chld_thm_cfg_parent-css" href="https://www.beesayatv.com/wp-content/themes/bloggerly/style.css?ver=7.0" media="all">
-<link rel="stylesheet" id="beesayatv-child-style-css" href="https://www.beesayatv.com/wp-content/themes/bloggerly-child/style.css?ver=1782737388" media="all">
+<link rel="stylesheet" id="beesayatv-child-style-css" href="https://www.beesayatv.com/wp-content/themes/bloggerly-child/style.css?ver=1782801658" media="all">
 <link rel="https://api.w.org/" href="https://www.beesayatv.com/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://www.beesayatv.com/wp-json/wp/v2/pages/96"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.beesayatv.com/xmlrpc.php?rsd">
 <meta name="generator" content="WordPress 7.0">
 <link rel="canonical" href="https://www.beesayatv.com/trail-atlas/">
@@ -158,25 +158,25 @@ margin:24px 0;
 
                                                 </div><!-- .site-branding -->
 
+            <button id="menu-toggle" class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" aria-label="Open menu">
+                <span class="icon-open" aria-hidden="true">☰</span>
+                <span class="icon-close" aria-hidden="true">✕</span>
+                <span class="screen-reader-text">
+                    Menu                </span>
+            </button>
 
-            <!-- Right Side -->
-            <div class="header-actions">
-
-                <nav id="site-navigation" class="main-navigation" aria-label="Primary menu" aria-hidden="true">
-                    <ul id="primary-menu" class="menu"><li id="menu-item-22" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-22"><a href="https://www.beesayatv.com/">Home</a></li>
+            <nav id="site-navigation" class="main-navigation" aria-label="Primary menu" aria-hidden="true">
+                <ul id="primary-menu" class="menu"><li id="menu-item-22" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-22"><a href="https://www.beesayatv.com/">Home</a></li>
 <li id="menu-item-97" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-96 current_page_item menu-item-97"><a href="https://www.beesayatv.com/trail-atlas/" aria-current="page">Atlas</a></li>
 <li id="menu-item-325" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-325"><a href="#">Trails</a>
 <ul class="sub-menu">
 	<li id="menu-item-257" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-257"><a href="https://www.beesayatv.com/difficulty/">By Difficulty</a></li>
 	<li id="menu-item-253" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-253"><a href="https://www.beesayatv.com/features/">By Features</a></li>
 	<li id="menu-item-245" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-245"><a href="https://www.beesayatv.com/locations/">By Location</a></li>
-	<li id="menu-item-328" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-328"><a href="https://www.beesayatv.com/category/articles/">Trail Blog</a></li>
 </ul>
 </li>
 <li id="menu-item-326" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-326"><a href="https://www.beesayatv.com/category/guides/">Guides</a></li>
-</ul>                </nav>
-
-            </div><!-- .header-actions -->
+</ul>            </nav>
 
         </div>
     </header>
@@ -218,6 +218,30 @@ window.WPLeafletMapPlugin.createMap(options).setView([44.67,-63.61],12);});</scr
     <script>
     document.addEventListener('DOMContentLoaded', function() {
 
+    var poiStyle=document.createElement('style');
+    poiStyle.innerHTML=`
+.btv-poi-marker{background:none!important;border:none!important;}
+.btv-poi-circle{
+width:36px;
+height:36px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#9A9D84;
+border:2px solid #F5F2E8;
+box-shadow:0 2px 6px rgba(0,0,0,.25);
+}
+.btv-poi-circle img{
+width:18px;
+height:18px;
+display:block;
+}
+`;
+    document.head.appendChild(poiStyle);
+
+
+
         var map = L.map('beesayatv-test-map');
 		
 		var legend = L.control({position: 'bottomright'});
@@ -250,9 +274,53 @@ legend.addTo(map);
             }
         ).addTo(map);
 
-        var trails = [{"title":"Alpaco Trail Loop","geojson":"\/wp-content\/uploads\/trails\/saturday-morning-hiking.geojson","article":"https:\/\/beesayatv.pages.dev\/the-alpaco-trail-loop-a-quiet-day-exploring-veloso-lake-and-the-countryside-of-naga\/","youtube":"https:\/\/www.youtube.com\/watch?v=URf-EO02OG8","wikiloc":"https:\/\/loc.wiki\/t\/270245328?wa=sc","difficulty":"Mild"},{"title":"Bitlang Trail Loop","geojson":"\/wp-content\/uploads\/trails\/bitlang-trail-loop.geojson","article":"https:\/\/www.beesayatv.com\/the-bitlang-trail-an-easy-descent-that-hides-a-much-bigger-challenge\/","youtube":"https:\/\/youtu.be\/tbXVShl_9V4","wikiloc":"https:\/\/loc.wiki\/t\/266819472?wa=sc","difficulty":"Mild"},{"title":"Cabanbanan Community Trail Loop","geojson":"\/wp-content\/uploads\/trails\/cabanbanan-community-trail-loop.geojson","article":"https:\/\/www.beesayatv.com\/the-cabanbanan-community-trail-loop-a-walk-through-toledos-mountain-communities\/","youtube":"https:\/\/youtu.be\/vdUiQQBGoic","wikiloc":"https:\/\/loc.wiki\/t\/271296184?wa=sc","difficulty":"Mild"},{"title":"Camp 7 Farm Trails","geojson":"\/wp-content\/uploads\/trails\/camp-7-farm-trails.geojson","article":"https:\/\/www.beesayatv.com\/the-camp-7-farm-trails-a-longer-walk-through-minglanillas-rolling-countryside\/","youtube":"https:\/\/youtu.be\/WTGa1Vw4XzU","wikiloc":"https:\/\/loc.wiki\/t\/264397703?wa=sc","difficulty":"Mild"},{"title":"Camp 7 Lubas Farm Trails","geojson":"\/wp-content\/uploads\/trails\/camp-7-lubas-farm-trails.geojson","article":"https:\/\/www.beesayatv.com\/the-camp-7-lubas-farm-trails-a-relaxed-walk-across-minglanillas-countryside\/","youtube":"https:\/\/youtu.be\/Pyn4lHcS1lA","wikiloc":"https:\/\/loc.wiki\/t\/264400659?wa=sc","difficulty":"Easy"},{"title":"Danasan Trail Loop","geojson":"\/wp-content\/uploads\/trails\/danasan-trail-loop.geojson","article":"https:\/\/www.beesayatv.com\/the-danasan-falls-trail-loop-taking-the-longer-route-to-one-of-danaos-most-popular-waterfalls\/","youtube":"https:\/\/youtu.be\/2PMkqt5Bpgs","wikiloc":"https:\/\/loc.wiki\/t\/269000993?wa=sc","difficulty":"Mild"},{"title":"Kalatkat Trail","geojson":"\/wp-content\/uploads\/trails\/kalatkat.geojson","article":"https:\/\/www.beesayatv.com\/mt-kalatkat-a-gentle-climb-with-views-that-keep-getting-better\/","youtube":"https:\/\/youtu.be\/NGbQ2JYJWNQ","wikiloc":"https:\/\/loc.wiki\/t\/265433777?wa=sc","difficulty":"Easy"},{"title":"Malingin Rock","geojson":"\/wp-content\/uploads\/trails\/malingin-rock.geojson","article":"https:\/\/www.beesayatv.com\/malingin-rock-a-short-hike-with-an-unexpected-hiking-companion\/","youtube":"https:\/\/youtu.be\/6qM2UmwiTTs","wikiloc":"https:\/\/loc.wiki\/t\/266080214?wa=sc","difficulty":"Easy"},{"title":"Radar Trail","geojson":"\/wp-content\/uploads\/trails\/radar-trail.geojson","article":"https:\/\/www.beesayatv.com\/the-radar-trail-a-relaxed-ridge-walk-from-sudlon-1-to-bagakay\/","youtube":"https:\/\/youtu.be\/cJa9RyQ6R0s","wikiloc":"https:\/\/loc.wiki\/t\/267996631?wa=sc","difficulty":"Easy"},{"title":"Toong Forest Trail","geojson":"\/wp-content\/uploads\/trails\/toong-forest-trail.geojson","article":"https:\/\/www.beesayatv.com\/the-toong-forest-trail-a-gentle-walk-to-kawa-kawa-falls\/","youtube":"https:\/\/youtu.be\/nHdTeN47JMo","wikiloc":"https:\/\/loc.wiki\/t\/264271527?wa=sc","difficulty":"Easy"},{"title":"Ylaya Camp 8","geojson":"\/wp-content\/uploads\/trails\/ylaya-camp-8.geojson","article":"https:\/\/www.beesayatv.com\/the-ylaya-camp-8-back-trails-a-relaxed-walk-through-minglanillas-countryside\/","youtube":"https:\/\/youtu.be\/U7Xwhh78i2A","wikiloc":"https:\/\/loc.wiki\/t\/264393123?wa=sc","difficulty":"Easy"}];
+        var trails = [{"title":"Alpaco Trail LoopThe Alpaco Trail Loop: A Quiet Day Exploring Veloso Lake and the Countryside of NagaAlpaco Trail Loop","geojson":"\/wp-content\/uploads\/trails\/saturday-morning-hiking.geojson","article":"https:\/\/beesayatv.pages.dev\/the-alpaco-trail-loop-a-quiet-day-exploring-veloso-lake-and-the-countryside-of-naga\/","youtube":"https:\/\/www.youtube.com\/watch?v=URf-EO02OG8","wikiloc":"https:\/\/loc.wiki\/t\/270245328?wa=sc","difficulty":"Mild"},{"title":"The Cabanbanan Community Trail Loop: A Walk Through Toledo's Mountain Communities","geojson":"\/wp-content\/uploads\/trails\/cabanbanan-community-trail-loop.geojson","article":"https:\/\/www.beesayatv.com\/trails\/cabanbanan-community-trail-loop\/","youtube":"https:\/\/youtu.be\/vdUiQQBGoic","wikiloc":"https:\/\/loc.wiki\/t\/271296184?wa=sc","difficulty":"Mild"},{"title":"The Camp 7 Farm Trails: A Longer Walk Through Minglanilla's Rolling Countryside","geojson":"\/wp-content\/uploads\/trails\/camp-7-farm-trails.geojson","article":"https:\/\/www.beesayatv.com\/trails\/camp-7-farm-trails\/","youtube":"https:\/\/youtu.be\/WTGa1Vw4XzU","wikiloc":"https:\/\/loc.wiki\/t\/264397703?wa=sc","difficulty":"Mild"},{"title":"The Camp 7 Lubas Farm Trails: A Relaxed Walk Across Minglanilla's Countryside","geojson":"\/wp-content\/uploads\/trails\/camp-7-lubas-farm-trails.geojson","article":"https:\/\/www.beesayatv.com\/trails\/camp-7-lubas-farm-trails\/","youtube":"https:\/\/youtu.be\/Pyn4lHcS1lA","wikiloc":"https:\/\/loc.wiki\/t\/264400659?wa=sc","difficulty":"Easy"}];
+		var pois = [{"title":"Community Spring","category":"spring","lat":"10.233794700684854","lng":"123.67661939909829","note":"Locals use it for everyday chores."}];
 
         var allLayers = [];
+		
+function getPoiIcon(category) {
+
+    var base = "https://www.beesayatv.com/wp-content/themes/bloggerly-child/images/poi/";
+
+    // Default fallback
+    var file = "poi.svg";
+
+    switch ((category || '').toLowerCase()) {
+
+        case "habal-habal":
+            file = "motorcycle.svg";
+            break;
+
+        case "spring":
+            file = "spring.svg";
+            break;
+
+        case "viewpoint":
+            file = "viewpoint.svg";
+            break;
+
+        case "store":
+            file = "store.svg";
+            break;
+
+        case "parking":
+            file = "parking.svg";
+            break;
+    }
+
+    return L.divIcon({
+        className: 'btv-poi-marker',
+        html:
+            '<div class="btv-poi-circle">' +
+                '<img decoding="async" src="' + (base + file) + '" alt="">' +
+            '</div>',
+        iconSize: [36,36],
+        iconAnchor: [18,18],
+        popupAnchor: [0,-18]
+    });
+
+}
 
         function getTrailColor(difficulty) {
 
@@ -348,6 +416,29 @@ legend.addTo(map);
                 });
 
         });
+		
+		pois.forEach(function(poi) {
+
+    if (!poi.lat || !poi.lng) {
+        return;
+    }
+
+    L.marker(
+    [
+        parseFloat(poi.lat),
+        parseFloat(poi.lng)
+    ],
+    {
+        icon: getPoiIcon(poi.category)
+    }
+)
+    .addTo(map)
+    .bindPopup(
+        '<strong>' + poi.title + '</strong><br>' +
+        (poi.note || '')
+    );
+
+});
 
     });
     </script>
