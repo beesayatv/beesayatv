@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?><?xml-stylesheet type='text/xsl' href='https://www.beesayatv.com/wp-content/plugins/google-sitemap-generator/sitemap.xsl'?><!-- sitemap-generator-url='http://www.arnebrachhold.de/' sitemap-generator-version='4.1.24' -->
-<!-- generated-on='July 1, 2026 1:49 am' -->
+<!-- generated-on='July 1, 2026 1:56 am' -->
 <urlset xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd' xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>	<url>
 		<loc>https://www.beesayatv.com/how-to-prepare-for-your-first-hike/</loc>
 		<lastmod>2026-06-30T13:35:15+00:00</lastmod>
@@ -12,4 +12,4 @@
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-</urlset><!-- <p>Please edit wp-db.inc.php in wp-includes and set SAVEQUERIES to true if you want to see the queries.</p> --> <!-- Request ID: d4c695673e1e79931d452f74bfebf2ff; Queries for sitemap: 4; Total queries: 15; Seconds: 0; Memory for sitemap: 1KB; Total memory: 4MB -->
+</urlset><!-- <p>Please edit wp-db.inc.php in wp-includes and set SAVEQUERIES to true if you want to see the queries.</p> --> <!-- Request ID: fbacef132f66f29fafa2abb556c3fbb9; Queries for sitemap: 4; Total queries: 15; Seconds: 0; Memory for sitemap: 1KB; Total memory: 4MB -->
