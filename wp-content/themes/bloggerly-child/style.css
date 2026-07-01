@@ -1070,3 +1070,16 @@ gap:20px;
     display:block;
     margin-top:8px;
 }
+
+
+.chat-page-container {
+    background: yellow !important;
+}
+
+.chat-main {
+    background: lightgreen !important;
+}
+
+.chat-sidebar {
+    background: red !important;
+}
