@@ -1,14 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?><?xml-stylesheet type='text/xsl' href='https://www.beesayatv.com/wp-content/plugins/google-sitemap-generator/sitemap.xsl'?><!-- sitemap-generator-url='http://www.arnebrachhold.de/' sitemap-generator-version='4.1.24' -->
-<!-- generated-on='July 1, 2026 5:43 am' -->
+<!-- generated-on='July 1, 2026 7:55 am' -->
 <urlset xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd' xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>	<url>
 		<loc>https://www.beesayatv.com/trail-location/cebu/</loc>
-		<lastmod>2026-06-26T03:37:28+00:00</lastmod>
+		<lastmod>2026-07-01T06:51:39+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
 	<url>
 		<loc>https://www.beesayatv.com/trail-location/danao/</loc>
 		<lastmod>2026-06-24T14:40:34+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>https://www.beesayatv.com/trail-location/dumanjug/</loc>
+		<lastmod>2026-07-01T07:20:43+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -37,9 +43,15 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>https://www.beesayatv.com/trail-location/talisay/</loc>
+		<lastmod>2026-07-01T07:41:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>https://www.beesayatv.com/trail-location/toledo/</loc>
 		<lastmod>2026-06-27T11:31:05+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
-</urlset><!-- <p>Please edit wp-db.inc.php in wp-includes and set SAVEQUERIES to true if you want to see the queries.</p> --> <!-- Request ID: b23ed0a8322b1990f07650a44675e533; Queries for sitemap: 9; Total queries: 21; Seconds: 0.01; Memory for sitemap: 1KB; Total memory: 4MB -->
+</urlset><!-- <p>Please edit wp-db.inc.php in wp-includes and set SAVEQUERIES to true if you want to see the queries.</p> --> <!-- Request ID: feedc572b20a0002e3ff544b521cedb9; Queries for sitemap: 11; Total queries: 23; Seconds: 0.01; Memory for sitemap: 1KB; Total memory: 4MB -->
