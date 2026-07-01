@@ -1071,15 +1071,13 @@ gap:20px;
     margin-top:8px;
 }
 
-
-.chat-page-container {
-    background: yellow !important;
-}
-
-.chat-main {
-    background: lightgreen !important;
-}
-
-.chat-sidebar {
-    background: red !important;
+/* Ask page Cloudflare widget */
+chat-page-snippet{
+    display:block;
+    height:550px;
+    border:1px solid #e2dece;
+    border-radius:16px;
+    box-shadow:0 4px 18px rgba(0,0,0,.05);
+    overflow:hidden;
+    margin:20px 0;
 }
