@@ -1081,3 +1081,12 @@ chat-page-snippet{
     overflow:hidden;
     margin:20px 0;
 }
+
+/* Match Pages to Trail typography */
+
+.page .entry-content p,
+.page .entry-content li{
+    font-size:18px;
+    line-height:1.8;
+}
+
