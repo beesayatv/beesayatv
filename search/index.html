@@ -124,7 +124,7 @@ margin:24px 0;
 <link rel="stylesheet" id="beesayatv-cards-css" href="https://www.beesayatv.com/wp-content/themes/bloggerly-child/css/cards.css?ver=1782971331" media="all">
 <link rel="stylesheet" id="bloggerly-style-css" href="https://www.beesayatv.com/wp-content/themes/bloggerly-child/style.css?ver=1.0.5.1782171480" media="all">
 <link rel="stylesheet" id="chld_thm_cfg_parent-css" href="https://www.beesayatv.com/wp-content/themes/bloggerly/style.css?ver=7.0" media="all">
-<link rel="stylesheet" id="beesayatv-child-style-css" href="https://www.beesayatv.com/wp-content/themes/bloggerly-child/style.css?ver=1783150505" media="all">
+<link rel="stylesheet" id="beesayatv-child-style-css" href="https://www.beesayatv.com/wp-content/themes/bloggerly-child/style.css?ver=1783152797" media="all">
 <link rel="https://api.w.org/" href="https://www.beesayatv.com/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://www.beesayatv.com/wp-json/wp/v2/pages/464"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.beesayatv.com/xmlrpc.php?rsd">
 <meta name="generator" content="WordPress 7.0">
 <link rel="canonical" href="https://www.beesayatv.com/search/">
@@ -456,15 +456,46 @@ margin:24px 0;
     <script src="https://www.beesayatv.com/pagefind/pagefind-ui.js"></script>
 
     <script>
-    window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('DOMContentLoaded', function () {
 
-        new PagefindUI({
-            element: "#search",
-            showSubResults: true,
-            showImages: false
-        });
-
+    const search = new PagefindUI({
+        element: "#search",
+        showSubResults: true,
+        showImages: false
     });
+
+    const input = document.querySelector("#search input");
+
+let timer;
+let lastSearch = "";
+
+input.addEventListener("input", function () {
+
+    clearTimeout(timer);
+
+    timer = setTimeout(function () {
+
+        const term = input.value.trim();
+
+        if (
+            term !== "" &&
+            term !== lastSearch &&
+            typeof gtag === "function"
+        ) {
+            lastSearch = term;
+
+            gtag("event", "view_search_results", {
+                search_term: term
+            });
+
+            console.log("GA4 sent:", term);
+        }
+
+    }, 2000);
+
+});
+
+});
     </script>
 
     <script id="bloggerly-theme-js-js-extra">
