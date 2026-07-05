@@ -140,19 +140,9 @@ function renderTrailCard(trail) {
                     <img src="${trail.thumbnail}" alt="${trail.title}">
                 </div>
 
-                <div class="post-content-wrap">
-
-                    <header class="entry-header">
-
-                        <h2 class="entry-title">
-                            ${trail.title}
-                        </h2>
-
-                    </header>
-
-                    <div class="entry-content"></div>
-
-                </div>
+                <h2 class="entry-title">
+                    ${trail.title}
+                </h2>
 
             </a>
 
