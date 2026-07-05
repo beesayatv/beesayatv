@@ -822,11 +822,36 @@ margin-bottom:24px;
 }
 
 .homepage-hero__image img{
-width:100%;
-display:block;
-border-radius:16px;
-aspect-ratio:16/9;
-object-fit:cover;
+    width:100%;
+    display:block;
+    aspect-ratio:16/9;
+    object-fit:cover;
+
+    border-radius:18px;
+    border:1px solid #d8d2bf;
+
+    box-shadow:0 12px 28px rgba(0,0,0,.08);
+}
+
+.homepage-hero__image{
+    position:relative;
+	margin-top:50px; 
+}
+
+.homepage-hero__image::after{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    border-radius:18px;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.06),
+        transparent 40%
+    );
+
+    pointer-events:none;
 }
 
 .homepage-explore h2{
