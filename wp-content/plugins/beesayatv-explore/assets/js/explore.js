@@ -229,6 +229,32 @@ if (selectedDifficulties.length > 0) {
 
 }
 
+const selectedFeatures = [];
+
+document.querySelectorAll(
+    'input[name="trail_feature[]"]:checked'
+).forEach(function (checkbox) {
+
+    selectedFeatures.push(checkbox.value);
+
+});
+
+if (selectedFeatures.length > 0) {
+
+    filtered = filtered.filter(function (trail) {
+
+        return trail.trail_feature.some(function (feature) {
+
+            return selectedFeatures.includes(feature);
+
+        });
+
+    });
+
+}
+
+
+
 const selectedTypes = [];
 
 document.querySelectorAll(
