@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?><?xml-stylesheet type='text/xsl' href='https://www.beesayatv.com/wp-content/plugins/google-sitemap-generator/sitemap.xsl'?><!-- sitemap-generator-url='http://www.arnebrachhold.de/' sitemap-generator-version='4.1.24' -->
-<!-- generated-on='July 5, 2026 7:51 am' -->
+<!-- generated-on='July 5, 2026 11:51 am' -->
 <urlset xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd' xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>	<url>
 		<loc>https://www.beesayatv.com/trails/alpaco-trail-loop/</loc>
 		<lastmod>2026-07-05T07:51:09+00:00</lastmod>
@@ -86,8 +86,8 @@
 	</url>
 	<url>
 		<loc>https://www.beesayatv.com/trails/camp-8-to-matun-og-falls-hike-turned-back-camp-8-minglanilla-2026-gpx/</loc>
-		<lastmod>2026-07-05T07:36:34+00:00</lastmod>
+		<lastmod>2026-07-05T11:36:16+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
-</urlset><!-- <p>Please edit wp-db.inc.php in wp-includes and set SAVEQUERIES to true if you want to see the queries.</p> --> <!-- Request ID: b8c5fd2207e81b1c901401959e580229; Queries for sitemap: 4; Total queries: 16; Seconds: 0.01; Memory for sitemap: 1KB; Total memory: 4MB -->
+</urlset><!-- <p>Please edit wp-db.inc.php in wp-includes and set SAVEQUERIES to true if you want to see the queries.</p> --> <!-- Request ID: 8807baa0cba4542d3a131052053d7183; Queries for sitemap: 4; Total queries: 16; Seconds: 0; Memory for sitemap: 1KB; Total memory: 6MB -->
