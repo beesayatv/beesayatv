@@ -58,7 +58,6 @@ a {
 color: var(--link-color);
 }
 
-
 /* ==================================================
 BRANDING
 ================================================== */
@@ -1369,4 +1368,130 @@ gap:20px;
 
 .wp-block-spacer{
     margin-bottom:0;
+}
+
+
+/* ===========================================
+   contact form
+=========================================== */
+
+.contact-card{
+
+    background:#fbf9f2;
+    border:1px solid #e8e2d2;
+    border-radius:10px;
+
+    padding:28px;
+
+    margin:35px 0;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.04);
+
+}
+
+.contact-form{
+
+    max-width:100%;
+    margin:0;
+
+}
+
+.contact-form p{
+
+    margin:0 0 22px;
+
+}
+
+.contact-form label{
+
+    display:block;
+    margin-bottom:8px;
+
+    font-weight:700;
+
+    color:#263525;
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    background:#fff;
+
+    border:1px solid #d8d2bf;
+
+    border-radius:8px;
+
+    font:inherit;
+
+    box-sizing:border-box;
+
+}
+
+.contact-form textarea{
+    resize:vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+    outline:none;
+
+    border-color:#6E7359;
+
+    box-shadow:0 0 0 3px rgba(110,115,89,.12);
+
+}
+
+.contact-form button{
+
+    background:#6E7359;
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:8px;
+
+    padding:13px 26px;
+
+    font:inherit;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+
+}
+
+.contact-form button:hover{
+
+    background:#4D533F;
+
+}
+
+@media (max-width:768px){
+
+    .contact-card{
+        padding:20px;
+        margin:24px 0;
+    }
+
+    .contact-form p{
+        margin-bottom:18px;
+    }
+
+    .contact-form label{
+        margin-bottom:6px;
+    }
+
+    .contact-form button{
+        width:100%;
+    }
+
 }
