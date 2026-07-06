@@ -1328,3 +1328,43 @@ gap:20px;
     padding-bottom:12px;
 }
 
+
+.trail-documentation-notice{
+    margin-top:16px;
+    padding:20px;
+    background:#F5F2E8;
+    border-left:4px solid #6E7359;
+    border-radius:6px;
+	
+}
+
+.trail-documentation-notice h2{
+
+    margin-top:0;
+    margin-bottom:10px;
+
+    font-size:1.1rem;
+
+}
+
+.trail-documentation-notice p{
+
+    margin:0;
+
+    color:#555;
+
+    line-height:1.7;
+
+}
+
+.entry-content > .trail-documentation-notice{
+    margin-top:20px;
+}
+
+.entry-content > p:empty{
+    display:none;
+}
+
+.wp-block-spacer{
+    margin-bottom:0;
+}
