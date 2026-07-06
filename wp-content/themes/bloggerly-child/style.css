@@ -581,6 +581,35 @@ Route Thumbnail
     width:260px;
 }
 
+.beesaya-trail-features{
+    margin:4px 0 0;
+    font-size:15px !important;
+    line-height:1.5;
+     width:100%;
+}
+
+.beesaya-trail-features span{
+    color:#777;
+    font-weight:500;
+}
+
+.beesaya-trail-features a,
+.beesaya-trail-features a:visited{
+    color:#999;
+    text-decoration:none;
+}
+
+.beesaya-trail-features a:hover{
+    color:#4D533F;
+    text-decoration:underline;
+}
+
+.beesaya-feature-separator{
+    color:#bbb;
+}
+
+
+
 .beesaya-route-link{
  	cursor:pointer;
 	position:relative;
@@ -1253,4 +1282,48 @@ gap:20px;
 
 .beesayatv-breadcrumbs .separator{
     margin:0 6px;
+}
+
+/* ===========================================
+   YouTube Embeds
+=========================================== */
+
+.wp-block-embed.is-provider-youtube{
+    background:#fbf9f2;
+    border:1px solid #e8e2d2;
+    border-radius:10px;
+    padding:10px;
+    margin:30px 0;
+    box-shadow:0 2px 8px rgba(0,0,0,.04);
+    overflow:hidden;
+	 transition:box-shadow .2s ease;
+}
+
+.wp-block-embed.is-provider-youtube iframe{
+    display:block;
+    border-radius:8px;
+}
+
+.wp-block-embed.is-provider-youtube:hover{
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+
+/* ===========================================
+   YouTube Embed Title
+=========================================== */
+
+.wp-block-embed.is-provider-youtube::before{
+    content:"Trail Video";
+    display:block;
+    font-size:1.3rem;
+    font-weight:700;
+    color:#2d3a2d;
+    margin-bottom:20px;
+    position:relative;
+}
+
+.wp-block-embed.is-provider-youtube::before{
+    background:
+        linear-gradient(#d8d3c6,#d8d3c6) left bottom / 60px 2px no-repeat;
+    padding-bottom:12px;
 }
