@@ -58,6 +58,7 @@ a {
 color: var(--link-color);
 }
 
+
 /* ==================================================
 BRANDING
 ================================================== */
@@ -332,7 +333,7 @@ BLOCKQUOTE
 ================================================== */
 
 .wp-block-quote {
-background:#fffdf6;
+background:transparent;
 border-left:5px solid var(--primary-color);
 border-radius:16px;
 padding:24px;
@@ -341,8 +342,9 @@ margin:30px 0;
 
 .wp-block-quote p{
 margin:0;
-font-style:italic;
+font-style:normal;
 line-height:1.8;
+color: #555;
 }
 
 .wp-block-quote cite{
@@ -1334,7 +1336,7 @@ gap:20px;
     padding:20px;
     background:#F5F2E8;
     border-left:4px solid #6E7359;
-    border-radius:6px;
+    border-radius:13px;
 	
 }
 
