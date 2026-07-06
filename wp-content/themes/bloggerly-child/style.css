@@ -866,7 +866,7 @@ margin-bottom:24px;
 
 .homepage-hero__image{
     position:relative;
-	margin-top:50px; 
+	margin-top:0px; 
 }
 
 .homepage-hero__image::after{
