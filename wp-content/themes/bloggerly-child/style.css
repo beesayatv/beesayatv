@@ -1158,19 +1158,6 @@ gap:20px;
 
 }
 
-@media (min-width:769px){
-
-    #primary-menu > li:last-child > a{
-        font-size:1.2rem;
-        line-height:1;
-		
-		position:relative;
-        top:2px;
-    }
-
-}
-
-
 @media (max-width:768px){
 
     /* Hide search inside the mobile menu */
@@ -1181,10 +1168,6 @@ gap:20px;
 	.menu-item-atlas{
         display:none;
     }
-	
-	.menu-item:last-child{
-    display:none;
-	}
 
 
     /* Position search beside the hamburger */
@@ -1206,16 +1189,11 @@ gap:20px;
 }
 
 .header-support{
-    color:inherit;
-    font-size:19px;
-    line-height:1;
-    text-decoration:none;	
-}
-
-.header-support{
     color:#c84b4b;
 }
 
+
+}
 
 .beesaya-info-icon {
     margin-left: 3px;
@@ -1524,6 +1502,8 @@ gap:20px;
     }
 
 }
-}
 
+/* ===========================================
+   show the heart icon
+=========================================== */
 
