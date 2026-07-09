@@ -1556,11 +1556,20 @@ gap:20px;
 #h5ap-player-1 .plyr {
     border: 1px solid #D8D2BD;
     border-radius: 10px !important;
-    overflow: hidden;
+
     background: transparent !important;
 }
 
 #h5ap-player-1 .plyr__controls {
     border: none !important;
     background: transparent !important;
+}
+
+#h5ap-player-1,
+.wp-block-h5ap-audioplayer,
+.skin_default,
+.h5ap_skin,
+.plyr {
+    position: relative;
+    z-index: 0 !important;
 }
