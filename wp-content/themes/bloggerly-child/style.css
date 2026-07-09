@@ -58,6 +58,10 @@ a {
 color: var(--link-color);
 }
 
+.site-description {
+    display: none;
+}
+
 /* ==================================================
 BRANDING
 ================================================== */
@@ -954,16 +958,19 @@ position:relative;
 }
 
 .homepage-card p{
-    flex:1;
     color:#666;
+    margin-bottom:12px;
 }
 
-.homepage-card span{
-    margin-top:auto;
-    font-weight:600;
+.homepage-card-meta{
+    margin-top:10px;
+
+    font-size:.78rem;
+    font-style:italic;
+
+    color:#999;
+    line-height:1.4;
 }
-
-
 
 .homepage-atlas{
 margin-top:45px;

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?><?xml-stylesheet type='text/xsl' href='https://www.beesayatv.com/wp-content/plugins/google-sitemap-generator/sitemap.xsl'?><!-- sitemap-generator-url='http://www.arnebrachhold.de/' sitemap-generator-version='4.1.24' -->
-<!-- generated-on='July 8, 2026 2:10 pm' -->
+<!-- generated-on='July 9, 2026 12:51 am' -->
 <urlset xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd' xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>	<url>
 		<loc>https://www.beesayatv.com/why-i-trust-field-observation-more-than-maps/</loc>
 		<lastmod>2026-07-08T14:09:42+00:00</lastmod>
@@ -32,8 +32,14 @@
 	</url>
 	<url>
 		<loc>https://www.beesayatv.com/high-blood-pressure-was-the-reason-i-started-hiking/</loc>
-		<lastmod>2026-07-08T14:01:26+00:00</lastmod>
+		<lastmod>2026-07-08T21:47:27+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-</urlset><!-- <p>Please edit wp-db.inc.php in wp-includes and set SAVEQUERIES to true if you want to see the queries.</p> --> <!-- Request ID: 2866c2d23bde22128e46188eadab8b5f; Queries for sitemap: 4; Total queries: 16; Seconds: 0; Memory for sitemap: 1KB; Total memory: 6MB -->
+	<url>
+		<loc>https://www.beesayatv.com/cebu-city-trailfest-pamutan-ultra-2026-scheduled-for-august-22-23/</loc>
+		<lastmod>2026-07-08T23:05:17+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+</urlset><!-- <p>Please edit wp-db.inc.php in wp-includes and set SAVEQUERIES to true if you want to see the queries.</p> --> <!-- Request ID: 436cd742eebb42195635ec078a16501c; Queries for sitemap: 4; Total queries: 16; Seconds: 0; Memory for sitemap: 1KB; Total memory: 6MB -->
