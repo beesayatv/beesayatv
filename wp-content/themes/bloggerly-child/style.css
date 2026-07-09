@@ -94,6 +94,8 @@ REMOVE BLOG FEEL
 display: none;
 }
 
+
+
 /* ==================================================
 POST / TRAIL CARDS
 ================================================== */
@@ -1572,4 +1574,25 @@ gap:20px;
 .plyr {
     position: relative;
     z-index: 0 !important;
+}
+
+/* ===== the posted date / update in wp post ===== */
+
+.beesayatv-post-meta{
+    margin-top: 30px;
+}
+
+.beesayatv-post-meta::before{
+    content: "";
+    display: block;
+    width: 70px;
+    height: 2px;
+    background: #d8d2bf;
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+
+.beesayatv-post-meta p{
+    margin: 0;
+    line-height: 1.35;
 }
