@@ -965,7 +965,7 @@ position:relative;
 .homepage-card-meta{
     margin-top:10px;
 
-    font-size:.78rem;
+    font-size:.9rem;
     font-style:italic;
 
     color:#999;
@@ -1512,4 +1512,55 @@ gap:20px;
         width:100%;
     }
 
+}
+
+/* ===== Beesayatv Plyr Theme ===== */
+
+#h5ap-player-1 .plyr {
+    --plyr-color-main: #6E7359;
+    --plyr-audio-controls-background: transparent;
+    --plyr-audio-control-color: #4D533F;
+    --plyr-color-text: #4D533F;
+
+    background: transparent;
+    box-shadow: none;
+}
+
+.wp-block-h5ap-audioplayer .plyr__controls{
+    border: 1px solid #D8D2BD;
+    border-radius: 20px;
+    padding: 10px 14px;
+    background: transparent;
+}
+
+#h5ap-player-1 .plyr__controls {
+    background: transparent !important;
+    border: 1px solid #D8D2BD;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+#h5ap-player-1 .plyr__control {
+    color: #4D533F;
+}
+
+#h5ap-player-1 .plyr__control:hover {
+    background: #6E7359;
+    color: #F5F2E8;
+}
+
+#h5ap-player-1 .plyr__time {
+    color: #4D533F;
+}
+
+#h5ap-player-1 .plyr {
+    border: 1px solid #D8D2BD;
+    border-radius: 10px !important;
+    overflow: hidden;
+    background: transparent !important;
+}
+
+#h5ap-player-1 .plyr__controls {
+    border: none !important;
+    background: transparent !important;
 }

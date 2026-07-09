@@ -1,0 +1,341 @@
+/* ==========================================================================
+   HTML5 Audio Player WordPress Admin Menu Redesign
+   Modern Premium Submenu Sidebar (FluentCRM Style Layout)
+   ========================================================================== */
+
+/* Match Parent Menu Background when Open */
+li[id^="toplevel_page_html5-audio-player"].wp-menu-open,
+li[id^="toplevel_page_html5-audio-player"].wp-menu-open>a.menu-top {
+    background-color: #0f172a !important;
+    /* Premium Slate 900 */
+}
+
+/* Submenu container style overrides */
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu {
+    background-color: #0f172a !important;
+    /* Premium Slate 900 */
+    padding: 6px 0 !important;
+}
+
+/* Submenu list item spacing */
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Section divider borders under specific menu group items (FluentCRM style).
+   Bound to slugs (NOT nth-child) so groups stay correct across free/pro:
+     Group 1: All players / Add player           -> divider after Add player
+     Group 2: Radio players / Add radio           -> divider after Add radio
+     Group 3: Playlists / Add playlist (pro only) -> divider after Add playlist
+     Group 4: Help & Demos / Settings / Account / (Upgrade)
+   In free there is no Playlists item, so Help & Demos simply joins Settings. */
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li:has(a[href*="html5-audio-player-add-new"]),
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li:has(a[href*="html5-radio-player-add-new"]),
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li:has(a[href*="html5-audio-playlist-add-new"]) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 8px !important;
+}
+
+/* Hide default head inside expanded mode */
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li.wp-submenu-head {
+    display: none !important;
+}
+
+/* Section divider top padding for spacing when headers are removed.
+   First item of each group: All players (2), Radio players (4),
+   Playlists (6), Help & Demos (8). Child 1 is the hidden submenu head. */
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li:nth-child(2),
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li:nth-child(4),
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li:nth-child(6),
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li:nth-child(8) {
+    margin-top: 4px !important;
+}
+
+/* Submenu Link design */
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li a {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-size: 12.5px !important;
+    padding: 8px 14px !important;
+    color: #cbd5e1 !important;
+    /* Lighter text color (increased visibility) */
+    display: flex !important;
+    align-items: center !important;
+    transition: color 0.15s ease, background-color 0.15s ease !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    /* No individual bottom borders */
+}
+
+/* Custom Icons via Dashicons */
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li a::before {
+    font-family: dashicons !important;
+    font-size: 13px !important;
+    margin-right: 8px !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    opacity: 0.7;
+}
+
+/* Icons are bound to each item's href/slug (NOT nth-child) so they stay
+   correct even when the item count changes between free and pro layouts
+   (e.g. "Playlists" exists only in pro, "Upgrade" only in free). */
+
+/* All players (parent dashboard / audioplayer list) */
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li a[href*="page=html5-audio-player"]::before,
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li a[href*="post_type=audioplayer"]::before {
+    content: "\f509" !important;
+    /* list-view */
+}
+
+/* Add player */
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li a[href*="html5-audio-player-add-new"]::before {
+    content: "+" !important;
+    /* clean text plus symbol */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    padding-left: 2px !important;
+}
+
+/* Radio players */
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li a[href*="post_type=radioplayer"]::before {
+    content: "\f500" !important;
+    /* media-audio */
+}
+
+/* Add radio */
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li a[href*="html5-radio-player-add-new"]::before {
+    content: "+" !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    padding-left: 2px !important;
+}
+
+/* Playlists (pro only) */
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li a[href*="post_type=audiolist"]::before {
+    content: "\f127" !important;
+    /* format-audio */
+}
+
+/* Add playlist */
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li a[href*="html5-audio-playlist-add-new"]::before {
+    content: "+" !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    padding-left: 2px !important;
+}
+
+/* Help & Demos */
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li a[href*="html5-audio-player-help-demo"]::before {
+    content: "\f223" !important;
+    /* info */
+}
+
+/* Settings */
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li a[href*="html5-audio-player-settings"]::before {
+    content: "\f111" !important;
+    /* admin-generic (cog) */
+}
+
+/* Account */
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li a[href*="account"]::before {
+    content: "\f110" !important;
+    /* admin-users */
+}
+
+/* Upgrade (free only): no icon before the orange button */
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li a[href*="pricing"]::before {
+    content: none !important;
+    margin-right: 0 !important;
+}
+
+/* Upgrade button styling */
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li a[href*="pricing"] {
+    background-color: #fb7a01 !important;
+    color: #ffffff !important;
+    padding: 10px 16px !important;
+    margin: 10px 14px 10px 14px !important;
+    border-radius: 6px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    transition: background-color 0.2s ease !important;
+    text-shadow: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li a[href*="pricing"]:hover {
+    background-color: #d66801 !important;
+    color: #ffffff !important;
+}
+
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li a[href*="pricing"]::after {
+    content: none !important;
+}
+
+/* Remove white background/shadow behind Upgrade button */
+#adminmenu li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li:has(a[href*="pricing"]),
+#adminmenu li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li.upgrade-mode,
+#adminmenu li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li.pricing,
+#adminmenu li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li a[href*="pricing"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Keep the WordPress active menu indicator triangle correctly at the top header of the parent menu */
+#adminmenu li[id^="toplevel_page_html5-audio-player"]::after,
+#adminmenu li[id^="toplevel_page_html5-audio-player"]>a.menu-top::after,
+#adminmenu li[id^="toplevel_page_html5-audio-player"] a.wp-has-current-submenu::after,
+#adminmenu li[id^="toplevel_page_html5-audio-player"].wp-has-current-submenu::after,
+#adminmenu li[id^="toplevel_page_html5-audio-player"] .wp-menu-arrow,
+#adminmenu li[id^="toplevel_page_html5-audio-player"] .wp-menu-arrow div {
+    top: 14px !important;
+    bottom: auto !important;
+    margin-top: 0 !important;
+}
+
+/* Hover state styling */
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li a:hover {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Active submenu link state */
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li.current a,
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li a.current {
+    background-color: #2563eb !important;
+    /* brand blue */
+    color: #ffffff !important;
+}
+
+/* Remove default WordPress focus borders/shadows to prevent flashing outlines on click */
+li[id^="toplevel_page_html5-audio-player"] a:focus,
+li[id^="toplevel_page_html5-audio-player"] a:active,
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li a:focus,
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li a:active {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* ==========================================================================
+   Custom Quick Shortcode Notice Styling
+   ========================================================================== */
+.h5ap-custom-notice-box {
+    display: none;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-left: 4px solid #2563eb !important;
+    padding: 12px 50px 12px 16px !important;
+    border-radius: 8px !important;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important; */
+    margin: 40px 0 20px 0 !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.h5ap-custom-notice-content {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    font-size: 14px !important;
+    color: #1e293b !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    line-height: 1.5 !important;
+}
+
+.h5ap-custom-notice-content .notice-text-wrap {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    flex-wrap: wrap !important;
+}
+
+.h5ap-custom-notice-code {
+    background: #f1f5f9 !important;
+    padding: 4px 8px !important;
+    border-radius: 4px !important;
+    font-family: monospace !important;
+    font-size: 13px !important;
+    color: #2563eb !important;
+    border: 1px solid #cbd5e1 !important;
+    font-weight: 600 !important;
+    user-select: all !important;
+}
+
+.h5ap-custom-notice-btn {
+    background: #2563eb !important;
+    border: 1px solid #2563eb !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease !important;
+    border-radius: 6px !important;
+    height: 28px !important;
+    line-height: 26px !important;
+    padding: 0 12px !important;
+    font-size: 12px !important;
+    cursor: pointer !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    outline: none !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+    vertical-align: middle !important;
+}
+
+.h5ap-custom-notice-btn:hover,
+.h5ap-custom-notice-btn:focus {
+    background: #1d4ed8 !important;
+    border-color: #1d4ed8 !important;
+    color: #ffffff !important;
+}
+
+.h5ap-custom-notice-close {
+    position: absolute !important;
+    right: 12px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    background: none !important;
+    border: none !important;
+    color: #94a3b8 !important;
+    cursor: pointer !important;
+    padding: 4px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    transition: all 0.2s ease !important;
+    width: 26px !important;
+    height: 26px !important;
+    box-sizing: border-box !important;
+    outline: none !important;
+}
+
+.h5ap-custom-notice-close:hover {
+    background: #f1f5f9 !important;
+    color: #475569 !important;
+}
+
+.h5ap-custom-notice-close svg {
+    display: block !important;
+}
+
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li.current a::before,
+li[id^="toplevel_page_html5-audio-player"] ul.wp-submenu li a.current::before {
+    color: #ffffff !important;
+    opacity: 1;
+}

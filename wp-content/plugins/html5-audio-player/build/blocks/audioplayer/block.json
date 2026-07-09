@@ -1,0 +1,287 @@
+{
+  "apiVersion": 3,
+  "name": "h5ap/audioplayer",
+  "title": "HTML5 Audio Player",
+  "description": "A responsive HTML5 audio player with customizable skins and controls.",
+  "category": "media",
+  "icon": "format-audio",
+  "version": "2.6.0",
+  "keywords": [
+    "HTML5 Audio Player",
+    "Media Player",
+    "Audio Player",
+    "mp3 player"
+  ],
+  "textdomain": "h5ap",
+  "attributes": {
+    "uniqueId": {
+      "type": "string",
+      "default": "uniqueId"
+    },
+    "clientId": {
+      "type": "string",
+      "default": ""
+    },
+    "align": {
+      "type": "string",
+      "default": ""
+    },
+    "alignment": {
+      "type": "string",
+      "default": "left"
+    },
+    "source": {
+      "type": "string",
+      "default": ""
+    },
+    "poster": {
+      "type": "string",
+      "default": ""
+    },
+    "title": {
+      "type": "string",
+      "default": "audio title"
+    },
+    "artist": {
+      "type": "string",
+      "default": ""
+    },
+    "color": {
+      "type": "string",
+      "default": "#87ceeb"
+    },
+    "primaryColor": {
+      "type": "string",
+      "default": null
+    },
+    "hoverColor": {
+      "type": "string",
+      "default": "#00B3FF"
+    },
+    "controlColor": {
+      "type": "string",
+      "default": "#4a5464"
+    },
+    "bgColor": {
+      "type": "string",
+      "default": null
+    },
+    "textColor": {
+      "type": "string",
+      "default": null
+    },
+    "skin": {
+      "type": "string",
+      "default": "Default"
+    },
+    "repeat": {
+      "type": "boolean",
+      "default": false
+    },
+    "autoplay": {
+      "type": "boolean",
+      "default": false
+    },
+    "muted": {
+      "type": "boolean",
+      "default": false
+    },
+    "loader": {
+      "type": "boolean",
+      "default": false
+    },
+    "saveState": {
+      "type": "boolean",
+      "default": false
+    },
+    "disablePause": {
+      "type": "boolean",
+      "default": false
+    },
+    "seekTime": {
+      "type": "number",
+      "default": 10
+    },
+    "startTime": {
+      "type": "number",
+      "default": 0
+    },
+    "preload": {
+      "type": "string",
+      "default": "metadata"
+    },
+    "download": {
+      "type": "boolean",
+      "default": true
+    },
+    "width": {
+      "type": "string",
+      "default": "100%"
+    },
+    "radius": {
+      "type": "string",
+      "default": "0px"
+    },
+    "i18n": {
+      "type": "object"
+    },
+    "speed": {
+      "type": "object",
+      "default": {
+        "selected": 1,
+        "speed": [
+          0.5,
+          0.75,
+          1,
+          1.25,
+          1.5,
+          1.75,
+          2,
+          4
+        ]
+      }
+    },
+    "controls": {
+      "type": "object",
+      "default": {
+        "restart": false,
+        "rewind": false,
+        "play": true,
+        "fast-forward": false,
+        "progress": true,
+        "duration": false,
+        "current-time": true,
+        "mute": true,
+        "volume": true,
+        "settings": true,
+        "download": false
+      }
+    },
+    "options": {
+      "type": "object",
+      "default": {
+        "volume": 0.5
+      }
+    },
+    "isSticky": {
+      "type": "boolean",
+      "default": false
+    },
+    "style": {
+      "type": "string"
+    },
+    "CSS": {
+      "type": "string",
+      "default": ""
+    },
+    "multiple_audio": {
+      "type": "boolean",
+      "default": false
+    },
+    "lazyLoad": {
+      "type": "string",
+      "default": "default"
+    },
+    "defaultValue": {
+      "type": "object",
+      "default": {
+        "Default": {
+          "primaryColor": "#4A5464",
+          "controlColor": "#4A5464",
+          "bgColor": "#F5F5F5"
+        },
+        "Fusion": {
+          "primaryColor": "#fff",
+          "bgColor": "#161616",
+          "controlColor": "#fff"
+        },
+        "Stamp": {
+          "controlColor": "#fff",
+          "bgColor": "#161616"
+        },
+        "Wave": {
+          "primaryColor": "#fff",
+          "controlColor": "#fff",
+          "bgColor": "#161616",
+          "textColor": "#fff"
+        },
+        "Card-1": {
+          "primaryColor": "#fff",
+          "controlColor": "#161616",
+          "bgColor": "#161616",
+          "textColor": "#fff"
+        },
+        "Card-2": {
+          "primaryColor": "#00FBF3",
+          "controlColor": "#fff",
+          "bgColor": "#161616",
+          "textColor": "#fff"
+        },
+        "Simple-1": {
+          "primaryColor": "#00dcff",
+          "controlColor": "#fff",
+          "bgColor": "#161616",
+          "textColor": "#00dcff"
+        },
+        "Simple-2": {
+          "primaryColor": "#06F7FF00",
+          "controlColor": "#fff",
+          "bgColor": "#161616"
+        },
+        "Player9": {
+          "primaryColor": "#195FF6",
+          "controlColor": "#fff",
+          "bgColor": "#161616",
+          "textColor": "#EDEFF2"
+        },
+        "Player10": {
+          "primaryColor": "#195FF6",
+          "controlColor": "#fff",
+          "bgColor": "#161616",
+          "textColor": "#EDEFF2"
+        },
+        "Player11": {
+          "primaryColor": "#195FF6",
+          "controlColor": "#fff",
+          "bgColor": "#161616",
+          "textColor": "#fff"
+        }
+      }
+    }
+  },
+  "supports": {
+    "html": false,
+    "lock": false
+  },
+  "example": {
+    "attributes": {
+      "preview": true
+    }
+  },
+  "editorStyle": [
+    "file:./style-index.css",
+    "file:./index.css",
+    "bplugins-plyrio",
+    "file:./view.css"
+  ],
+  "editorScript": [
+    "file:./index.js",
+    "wp-components",
+    "wp-block-editor",
+    "wp-element",
+    "wp-i18n",
+    "wp-compose",
+    "bplugins-plyrio"
+  ],
+  "viewScript": [
+    "file:./view.js",
+    "bplugins-plyrio",
+    "react",
+    "react-dom"
+  ],
+  "style": [
+    "file:./view.css",
+    "bplugins-plyrio"
+  ],
+  "render": "file:./render.php"
+}
