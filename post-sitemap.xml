@@ -1,38 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?><?xml-stylesheet type='text/xsl' href='https://www.beesayatv.com/wp-content/plugins/google-sitemap-generator/sitemap.xsl'?><!-- sitemap-generator-url='http://www.arnebrachhold.de/' sitemap-generator-version='4.1.24' -->
-<!-- generated-on='July 9, 2026 9:12 am' -->
+<!-- generated-on='July 10, 2026 10:51 am' -->
 <urlset xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd' xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>	<url>
-		<loc>https://www.beesayatv.com/why-i-trust-field-observation-more-than-maps/</loc>
-		<lastmod>2026-07-08T14:09:42+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.2</priority>
-	</url>
-	<url>
 		<loc>https://www.beesayatv.com/about-gpx-files/</loc>
-		<lastmod>2026-07-08T03:55:31+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.2</priority>
-	</url>
-	<url>
-		<loc>https://www.beesayatv.com/learning-to-live-with-anxiety-on-the-trail/</loc>
-		<lastmod>2026-07-08T14:04:14+00:00</lastmod>
+		<lastmod>2026-07-10T10:41:19+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
 	<url>
 		<loc>https://www.beesayatv.com/proposed-cebu-city-ordinance-seeks-safety-standards-for-upland-tourism/</loc>
 		<lastmod>2026-07-09T09:11:31+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.2</priority>
-	</url>
-	<url>
-		<loc>https://www.beesayatv.com/when-i-questioned-my-own-fear/</loc>
-		<lastmod>2026-07-07T14:04:01+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.2</priority>
-	</url>
-	<url>
-		<loc>https://www.beesayatv.com/high-blood-pressure-was-the-reason-i-started-hiking/</loc>
-		<lastmod>2026-07-08T21:47:27+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
@@ -48,4 +24,10 @@
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-</urlset><!-- <p>Please edit wp-db.inc.php in wp-includes and set SAVEQUERIES to true if you want to see the queries.</p> --> <!-- Request ID: 8a398b42e8f827a8607b0799a821723a; Queries for sitemap: 4; Total queries: 19; Seconds: 0.01; Memory for sitemap: 1KB; Total memory: 6MB -->
+	<url>
+		<loc>https://www.beesayatv.com/easy-hiking-trails-in-cebu/</loc>
+		<lastmod>2026-07-10T10:49:44+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+</urlset><!-- <p>Please edit wp-db.inc.php in wp-includes and set SAVEQUERIES to true if you want to see the queries.</p> --> <!-- Request ID: b42c8a88b084ae82102deea5e6bf2b35; Queries for sitemap: 4; Total queries: 19; Seconds: 0.01; Memory for sitemap: 1KB; Total memory: 6MB -->
