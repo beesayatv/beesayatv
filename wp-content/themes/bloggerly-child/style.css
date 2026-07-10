@@ -1209,19 +1209,19 @@ gap:20px;
 }
 
 .beesaya-info-icon {
-    margin-left: 3px;
-    color: #888;
-    font-size: 10x;
-    cursor: help;
-    vertical-align: middle;
-}
-
-.beesaya-info-icon {
     position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
     margin-left: 4px;
     color: #888;
+    font-size: 10px;
     cursor: help;
+
+    transform: translateY(3px);
 }
+
 
 .beesaya-tooltip {
     display: none;
@@ -1243,7 +1243,9 @@ gap:20px;
     color: #333;
 }
 
-.beesaya-info-icon:hover .beesaya-tooltip {
+.beesaya-info-icon:hover .beesaya-tooltip,
+.beesaya-info-icon:focus .beesaya-tooltip,
+.beesaya-info-icon:focus-within .beesaya-tooltip {
     display: block;
 }
 
