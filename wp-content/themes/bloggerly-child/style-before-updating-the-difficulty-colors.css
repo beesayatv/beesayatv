@@ -403,9 +403,7 @@ color:var(--muted-color);
 
 .beesaya-difficulty{
 
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
+    display:inline-block;
 
     padding:4px 12px;
 
@@ -420,30 +418,37 @@ color:var(--muted-color);
     letter-spacing:.5px;
 
     margin:8px 0 18px;
-	line-height:2.1;
 
 }
 
 /* Difficulty Colors */
 
 .beesaya-easy{
-    background:#4CAF50;
-    color:#ffffff;
+
+    background:#dff6df;
+    color:#2f6b2f;
+
 }
 
 .beesaya-mild{
-    background:#0F52BA;
-    color:#ffffff;
+
+    background:#fff4c7;
+    color:#9b6b00;
+
 }
 
 .beesaya-tough{
-    background:#F28C28;
-    color:#ffffff;
+
+    background:#ffe2d7;
+    color:#b54828;
+
 }
 
 .beesaya-epic{
-    background:#9C27B0;
-    color:#ffffff;
+
+    background:#eddcff;
+    color:#6d3fb3;
+
 }
 
 /* ===========================================
