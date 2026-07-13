@@ -72,7 +72,6 @@
             "easy"
         ],
         "trail_feature": [
-            "river",
             "river-crossing",
             "waterfall"
         ],
@@ -179,6 +178,26 @@
         ]
     },
     {
+        "title": "Campagao Community Trail Loop | Manduang, Minglanilla | 2026 GPX",
+        "url": "https://www.beesayatv.com/trails/campagao-community-trail-loop-manduang-minglanilla-2026-gpx/",
+        "thumbnail": "https://www.beesayatv.com/wp-content/uploads/2026/07/quiet-solo-hike-2-768x432.jpg",
+        "trail_location": [
+            "minglanilla"
+        ],
+        "trail_difficulty": [
+            "mild"
+        ],
+        "trail_feature": [
+            "cliff",
+            "roads",
+            "stairs",
+            "viewpoint"
+        ],
+        "trail_type": [
+            "loop"
+        ]
+    },
+    {
         "title": "Danasan Falls Trail Loop | Danasan, Danao | 2026 GPX",
         "url": "https://www.beesayatv.com/trails/danasan-trail-loop/",
         "thumbnail": "https://www.beesayatv.com/wp-content/uploads/2026/06/IMG_5726_202606121049054.MP4_snapshot_00.01.454-768x432.jpg",
@@ -191,7 +210,6 @@
         "trail_feature": [
             "farmland",
             "river-crossing",
-            "swimming",
             "waterfall"
         ],
         "trail_type": [
@@ -209,7 +227,6 @@
             "easy"
         ],
         "trail_feature": [
-            "river",
             "river-crossing",
             "rock-formation"
         ],
@@ -228,7 +245,6 @@
             "easy"
         ],
         "trail_feature": [
-            "campsite",
             "roads",
             "rolling-hills",
             "viewpoint"
@@ -248,7 +264,6 @@
             "easy"
         ],
         "trail_feature": [
-            "campsite",
             "cliff",
             "peak"
         ],
@@ -287,9 +302,7 @@
         ],
         "trail_feature": [
             "farmland",
-            "river",
             "river-crossing",
-            "swimming",
             "valley"
         ],
         "trail_type": [
@@ -307,10 +320,8 @@
             "mild"
         ],
         "trail_feature": [
-            "campsite",
             "sunrise-view",
             "sunset-view",
-            "swimming",
             "valley"
         ],
         "trail_type": [
