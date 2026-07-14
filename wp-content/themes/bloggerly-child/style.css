@@ -1703,3 +1703,8 @@ rounded trail atlas
 .beesaya-route-link:focus-visible{
     outline: none;
 }
+
+/* hide the trail atlas title to make more room for the map */
+.page-id-96 .entry-title{
+    display:none;
+}
