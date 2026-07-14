@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?><?xml-stylesheet type='text/xsl' href='https://www.beesayatv.com/wp-content/plugins/google-sitemap-generator/sitemap.xsl'?><!-- sitemap-generator-url='http://www.arnebrachhold.de/' sitemap-generator-version='4.1.24' -->
-<!-- generated-on='July 14, 2026 11:45 am' -->
+<!-- generated-on='July 14, 2026 12:30 pm' -->
 <urlset xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd' xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>	<url>
 		<loc>https://www.beesayatv.com/</loc>
-		<lastmod>2026-07-14T10:02:19+00:00</lastmod>
+		<lastmod>2026-07-14T12:29:21+00:00</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://www.beesayatv.com/sitemap.html</loc>
-		<lastmod>2026-07-14T10:02:19+00:00</lastmod>
+		<lastmod>2026-07-14T12:29:21+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
-</urlset><!-- <p>Please edit wp-db.inc.php in wp-includes and set SAVEQUERIES to true if you want to see the queries.</p> --> <!-- Request ID: 6e78d10dbcc6d9cf268b902051e5ae7b; Queries for sitemap: 3; Total queries: 18; Seconds: 0.01; Memory for sitemap: 1KB; Total memory: 6MB -->
+</urlset><!-- <p>Please edit wp-db.inc.php in wp-includes and set SAVEQUERIES to true if you want to see the queries.</p> --> <!-- Request ID: d9ebc53995599e456cdf523fa81e0609; Queries for sitemap: 3; Total queries: 18; Seconds: 0.01; Memory for sitemap: 1KB; Total memory: 6MB -->
