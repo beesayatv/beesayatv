@@ -1688,3 +1688,9 @@ rounded trail atlas
     overflow:hidden;
 }
 
+/* add map border */
+#beesayatv-test-map {
+    border: 2px solid #d9d3c3;
+    border-radius: 8px;
+    overflow: hidden;
+}
