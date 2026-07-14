@@ -631,26 +631,29 @@ Route Thumbnail
 
 .beesaya-open-map{
     position:absolute;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     top:10px;
     right:10px;
-
-    padding:6px 10px;
-
+    width:30px;
+    height:30px;
+    padding:0;
     background:rgba(245,242,232,.95);
-
     border:1px solid #d8d2bf;
-
-    border-radius:999px;
-
+    border-radius:50%;
     color:#4D533F;
-
     font-size:.75rem;
-
     font-weight:700;
-
     line-height:1;
-
     transition:.2s ease;
+}
+
+.beesaya-open-map svg{
+    width:14px;
+    height:14px;
+    flex:none;
+    display:block;
 }
 
 .beesaya-route-link:hover .beesaya-open-map{
@@ -661,7 +664,7 @@ Route Thumbnail
 
 }
 
-.beesaya-route-map svg{
+.beesaya-route-map > .beesaya-route-link > svg{
     display:block;
     width:260px;
     height:auto;
@@ -1693,4 +1696,10 @@ rounded trail atlas
     border: 2px solid #d9d3c3;
     border-radius: 8px;
     overflow: hidden;
+}
+
+.beesaya-route-link:hover,
+.beesaya-route-link:focus,
+.beesaya-route-link:focus-visible{
+    outline: none;
 }
