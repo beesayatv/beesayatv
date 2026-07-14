@@ -39,10 +39,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
 /*# sourceURL=https://www.beesayatv.com/wp-includes/blocks/paragraph/style.min.css */
 </style>
-<style id="wp-block-quote-inline-css">
-.wp-block-quote{box-sizing:border-box;overflow-wrap:break-word}.wp-block-quote.is-large:where(:not(.is-style-plain)),.wp-block-quote.is-style-large:where(:not(.is-style-plain)){margin-bottom:1em;padding:0 1em}.wp-block-quote.is-large:where(:not(.is-style-plain)) p,.wp-block-quote.is-style-large:where(:not(.is-style-plain)) p{font-size:1.5em;font-style:italic;line-height:1.6}.wp-block-quote.is-large:where(:not(.is-style-plain)) cite,.wp-block-quote.is-large:where(:not(.is-style-plain)) footer,.wp-block-quote.is-style-large:where(:not(.is-style-plain)) cite,.wp-block-quote.is-style-large:where(:not(.is-style-plain)) footer{font-size:1.125em;text-align:right}.wp-block-quote>cite{display:block}
-/*# sourceURL=https://www.beesayatv.com/wp-includes/blocks/quote/style.min.css */
-</style>
 
 <style id="classic-theme-styles-inline-css">
 /*! This file is auto-generated */
@@ -135,7 +131,7 @@ margin:24px 0;
 <link rel="stylesheet" id="beesayatv-cards-css" href="https://www.beesayatv.com/wp-content/themes/bloggerly-child/css/cards.css?ver=1782971331" media="all">
 <link rel="stylesheet" id="bloggerly-style-css" href="https://www.beesayatv.com/wp-content/themes/bloggerly-child/style.css?ver=1.0.5.1782171480" media="all">
 <link rel="stylesheet" id="chld_thm_cfg_parent-css" href="https://www.beesayatv.com/wp-content/themes/bloggerly/style.css?ver=7.0.1" media="all">
-<link rel="stylesheet" id="beesayatv-child-style-css" href="https://www.beesayatv.com/wp-content/themes/bloggerly-child/style.css?ver=1784012447" media="all">
+<link rel="stylesheet" id="beesayatv-child-style-css" href="https://www.beesayatv.com/wp-content/themes/bloggerly-child/style.css?ver=1784019433" media="all">
 <link rel="https://api.w.org/" href="https://www.beesayatv.com/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://www.beesayatv.com/wp-json/wp/v2/pages/96"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.beesayatv.com/xmlrpc.php?rsd">
 <meta name="generator" content="WordPress 7.0.1">
 <link rel="canonical" href="https://www.beesayatv.com/trail-atlas/">
@@ -517,7 +513,7 @@ margin:24px 0;
             
             <div class="entry-content">
                 
-<p class="wp-block-paragraph">Click route for more info.</p>
+<p class="wp-block-paragraph">Search or select a trail to explore.</p>
 
 
 <div class="leaflet-map WPLeafletMap" style="height:1px; width:100%;"></div><script>
@@ -539,7 +535,12 @@ var base = (!baseUrl && window.MQ) ?
     {});
 window.WPLeafletMapPlugin.createMap(options).setView([44.67,-63.61],5);});</script>
 
-    <div id="beesayatv-test-map" style="height:500px;"></div>
+<div class="beesayatv-atlas-search">
+
+<input id="trail-search" type="text" placeholder="Find a trail or place...">
+
+</div>
+<div id="beesayatv-test-map" style="height:500px;"></div>
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -588,6 +589,7 @@ locateStyle.innerHTML = `
     background-size:contain;
     background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='2' x2='5' y1='12' y2='12'/><line x1='19' x2='22' y1='12' y2='12'/><line x1='12' x2='12' y1='2' y2='5'/><line x1='12' x2='12' y1='19' y2='22'/><circle cx='12' cy='12' r='7'/><circle cx='12' cy='12' r='3'/></svg>");
 }
+
 `;
 
 document.head.appendChild(locateStyle);
@@ -614,28 +616,34 @@ document.head.appendChild(locateStyle);
 
 legend.onAdd = function(map) {
 
-    var div = L.DomUtil.create('div', 'info legend');
+    var div = L.DomUtil.create('div', 'info legend beesayatv-legend');
 
-    div.style.background = 'white';
-    div.style.padding = '10px';
+    div.style.background = '#F5F2E8';
+    div.style.padding = '8px';
     div.style.border = '1px solid #ccc';
     div.style.borderRadius = '5px';
 
-div.innerHTML =
-'<strong>Difficulty</strong><br>' +
+div.innerHTML = `
+<div style="
+<div style="
+margin-top:4px;
+font-size:13px;
+line-height:1.3;
+">
 
-'<span style="display:inline-block;width:24px;border-top:5px solid green;vertical-align:middle;margin-right:6px;"></span> Easy<br>' +
+<span style="display:inline-block;width:12px;border-top:5px solid green;vertical-align:middle;margin-right:4px;"></span>Easy
 
-'<span style="display:inline-block;width:24px;border-top:5px solid #0F52BA;vertical-align:middle;margin-right:6px;"></span> Mild<br>' +
+<span style="display:inline-block;width:12px;border-top:5px solid #0F52BA;vertical-align:middle;margin:0 8px 0 12px;"></span>Mild
 
-'<span style="display:inline-block;width:24px;border-top:5px solid #F28C28;vertical-align:middle;margin-right:6px;"></span> Tough<br>' +
+<span style="display:inline-block;width:12px;border-top:5px solid #F28C28;vertical-align:middle;margin:0 8px 0 12px;"></span>Tough
 
-'<span style="display:inline-block;width:24px;border-top:5px solid purple;vertical-align:middle;margin-right:6px;"></span> Epic<br>' +
+<span style="display:inline-block;width:12px;border-top:5px solid purple;vertical-align:middle;margin:0 8px 0 12px;"></span>Epic
+</div>
 
-'<svg width="24" height="8" style="vertical-align:middle;margin-right:6px;">' +
-'<line x1="0" y1="4" x2="24" y2="4" stroke="red" stroke-width="6"/>' +
-'<line x1="0" y1="4" x2="24" y2="4" stroke="white" stroke-width="3"/>' +
-'</svg> Being Explored';
+
+`;
+
+
     return div;
 };
 
@@ -652,6 +660,7 @@ legend.addTo(map);
 		var pois = [{"title":"Danasan Falls","category":"swim-spot","parent_category":"","lucide":"<path d=\"M2 12q2.5 2 5 0t5 0 5 0 5 0\"\/>\r\n<path d=\"M2 19q2.5 2 5 0t5 0 5 0 5 0\"\/>\r\n<path d=\"M2 5q2.5 2 5 0t5 0 5 0 5 0\"\/>","lat":"10.569128","lng":"123.844903","note":"Danasan Falls swimming area"},{"title":"House\/s","category":"house","parent_category":"context","lucide":"<path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"\/>\r\n<path d=\"M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"\/>","lat":"10.287934058090402","lng":"123.79066408007336","note":"A house\/s located along the hiking route."},{"title":"Mini Switzerland Campsite","category":"campsite","parent_category":"","lucide":"<path d=\"M3.5 21 14 3\"\/>\r\n<path d=\"M20.5 21 10 3\"\/>\r\n<path d=\"M15.5 21 12 15l-3.5 6\"\/>\r\n<path d=\"M2 21h20\"\/>","lat":"10.31902","lng":"123.79259","note":"A campsite with 360\u00b0 views and improved road access."},{"title":"Mt. Kalatkat Campsite","category":"campsite","parent_category":"","lucide":"<path d=\"M3.5 21 14 3\"\/>\r\n<path d=\"M20.5 21 10 3\"\/>\r\n<path d=\"M15.5 21 12 15l-3.5 6\"\/>\r\n<path d=\"M2 21h20\"\/>","lat":"10.08457","lng":"123.58151","note":"A campsite with panoramic views."},{"title":"Sari-Sari Store","category":"sari-sari-store","parent_category":"context","lucide":"<circle cx=\"8\" cy=\"21\" r=\"1\"\/>\r\n<circle cx=\"19\" cy=\"21\" r=\"1\"\/>\r\n<path d=\"M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12\"\/>","lat":"10.280027545739676","lng":"123.79095416199605","note":"A small sari-sari store along the route."},{"title":"Spring","category":"spring","parent_category":"","lucide":"<path d=\"M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z\"\/>\r\n<path d=\"M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97\"\/>","lat":"10.233794700684854","lng":"123.67661939909829","note":"A concrete spring catchment used by locals for everyday chores."},{"title":"Toong Lumadnon","category":"campsite","parent_category":"","lucide":"<path d=\"M3.5 21 14 3\"\/>\r\n<path d=\"M20.5 21 10 3\"\/>\r\n<path d=\"M15.5 21 12 15l-3.5 6\"\/>\r\n<path d=\"M2 21h20\"\/>","lat":"10.300132803013053","lng":"123.84996078614572","note":"A campsite with panoramic city views and swimming pools."},{"title":"Veloso Lake Campsite","category":"campsite","parent_category":"","lucide":"<path d=\"M3.5 21 14 3\"\/>\r\n<path d=\"M20.5 21 10 3\"\/>\r\n<path d=\"M15.5 21 12 15l-3.5 6\"\/>\r\n<path d=\"M2 21h20\"\/>","lat":"10.24123","lng":"123.66295","note":"Tree-shaded campsite by the lake."}];
 
         var allLayers = [];
+		var trailLayers = {};
 		
 function getPoiIcon(poi) {
 
@@ -854,8 +863,13 @@ if (trail.route) {
 */
 
 clickLayer.bindPopup(popupHtml, {
-    maxWidth: 220
+    maxWidth: 200
 });
+
+trailLayers[trail.title] = {
+    layer: layer,
+    clickLayer: clickLayer
+};
 
                     allLayers.push(layer);
 
@@ -914,22 +928,67 @@ pois.forEach(function(poi) {
     )
     .addTo(map)
     .bindPopup(popupHtml, {
-        maxWidth: 220,
+        maxWidth: 200,
         className: 'poi-popup'
     });
 
 });
 
+
+var search = document.getElementById("trail-search");
+search.addEventListener("input", function () {
+
+    search.placeholder = "Find a trail...";
+
+});
+
+
+function zoomToTrail() {
+
+    var query = search.value.trim().toLowerCase();
+
+    if (!query) {
+        return;
+    }
+
+    var selected = null;
+
+    for (var name in trailLayers) {
+
+        if (name.toLowerCase().includes(query)) {
+            selected = trailLayers[name];
+            break;
+        }
+
+    }
+
+	if (!selected) {
+
+		search.value = "";
+		search.placeholder = "No matching result";
+
+		return;
+	}
+    map.fitBounds(selected.layer.getBounds(), {
+        padding: [30, 30]
+    });
+
+ 
+}
+
+search.addEventListener("change", zoomToTrail);
+
+search.addEventListener("keydown", function(e){
+
+    if(e.key === "Enter"){
+        zoomToTrail();
+    }
+
+});
     });
     </script>
 
     
-
-
-
-<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
-<p class="wp-block-paragraph"><strong>Disclaimer:</strong> This page documents observations from a specific visit. Conditions, access, and other circumstances may change over time. It is provided for informational and documentary purposes only.</p>
-</blockquote>
             </div>
         </article>
         
