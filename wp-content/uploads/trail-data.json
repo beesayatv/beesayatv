@@ -1,5 +1,16 @@
 [
     {
+        "title": "../Being Explored: Campagao Peak Area",
+        "url": "https://www.beesayatv.com/trails/being-explored-campagao-peak-area/",
+        "thumbnail": "https://www.beesayatv.com/wp-content/uploads/2026/07/IMG_6470_202607130835010.MOV_snapshot_00.23.559-768x432.jpg",
+        "trail_location": [
+            "minglanilla"
+        ],
+        "trail_difficulty": [],
+        "trail_feature": [],
+        "trail_type": []
+    },
+    {
         "title": "Alpaco Trail Loop | Alpaco, Naga City | 2026 GPX",
         "url": "https://www.beesayatv.com/trails/alpaco-trail-loop/",
         "thumbnail": "https://www.beesayatv.com/wp-content/uploads/2026/06/IMG_6077_202606200817014.MP4_snapshot_00.07.169-768x432.jpg",
@@ -18,15 +29,6 @@
         "trail_type": [
             "loop"
         ]
-    },
-    {
-        "title": "Being Explored: Campagao Peak Area",
-        "url": "https://www.beesayatv.com/trails/being-explored-campagao-peak-area/",
-        "thumbnail": "https://www.beesayatv.com/wp-content/uploads/2026/07/IMG_6470_202607130835010.MOV_snapshot_00.23.559-768x432.jpg",
-        "trail_location": [],
-        "trail_difficulty": [],
-        "trail_feature": [],
-        "trail_type": []
     },
     {
         "title": "Bitlang Trail | Sudlon 1, Cebu City | 2026 GPX",
