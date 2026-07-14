@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?><?xml-stylesheet type='text/xsl' href='https://www.beesayatv.com/wp-content/plugins/google-sitemap-generator/sitemap.xsl'?><!-- sitemap-generator-url='http://www.arnebrachhold.de/' sitemap-generator-version='4.1.24' -->
-<!-- generated-on='July 14, 2026 4:25 am' -->
+<!-- generated-on='July 14, 2026 6:14 am' -->
 <urlset xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd' xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>	<url>
 		<loc>https://www.beesayatv.com/trails/alpaco-trail-loop/</loc>
 		<lastmod>2026-07-13T09:01:36+00:00</lastmod>
@@ -108,4 +108,4 @@
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
-</urlset><!-- <p>Please edit wp-db.inc.php in wp-includes and set SAVEQUERIES to true if you want to see the queries.</p> --> <!-- Request ID: 9497b438c29dc8b03dab0f375cf1065b; Queries for sitemap: 4; Total queries: 19; Seconds: 0.01; Memory for sitemap: 1KB; Total memory: 6MB -->
+</urlset><!-- <p>Please edit wp-db.inc.php in wp-includes and set SAVEQUERIES to true if you want to see the queries.</p> --> <!-- Request ID: 66264578ace3f9aff8266e2d7dc745d9; Queries for sitemap: 4; Total queries: 19; Seconds: 0.01; Memory for sitemap: 1KB; Total memory: 6MB -->
