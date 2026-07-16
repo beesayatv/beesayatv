@@ -3,46 +3,16 @@
   max-width: 100%;
   margin: 0 auto;
 }
+
 .h5ap_search_template h1 {
   margin: 30px auto;
 }
+
 .h5ap_search_template .plyr {
   height: auto;
   margin-bottom: 50px;
 }
 
-/* #h5ap_search_form {
-  position: relative;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-
-  input {
-    width: 100%;
-    padding: 10px 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-
-  button {
-    position: absolute;
-    right: -7%;
-    top: 50%;
-    border: 0;
-    transform: translate(0%, -50%);
-    padding: 0;
-    height: 100%;
-    width: 50px;
-    background: transparent;
-    line-height: 0;
-  }
-
-  svg {
-    fill: #333;
-    height: 25px;
-    width: 25px;
-  }
-} */
 
 #h5ap_search_form {
   position: relative;
@@ -93,4 +63,3 @@
     width: 16px;
   }
 }
-
