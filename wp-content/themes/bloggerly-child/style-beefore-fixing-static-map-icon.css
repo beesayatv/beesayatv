@@ -631,26 +631,29 @@ Route Thumbnail
 
 .beesaya-open-map{
     position:absolute;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     top:10px;
     right:10px;
-
-    padding:6px 10px;
-
+    width:30px;
+    height:30px;
+    padding:0;
     background:rgba(245,242,232,.95);
-
     border:1px solid #d8d2bf;
-
-    border-radius:999px;
-
+    border-radius:50%;
     color:#4D533F;
-
     font-size:.75rem;
-
     font-weight:700;
-
     line-height:1;
-
     transition:.2s ease;
+}
+
+.beesaya-open-map svg{
+    width:14px;
+    height:14px;
+    flex:none;
+    display:block;
 }
 
 .beesaya-route-link:hover .beesaya-open-map{
@@ -661,7 +664,7 @@ Route Thumbnail
 
 }
 
-.beesaya-route-map svg{
+.beesaya-route-map > .beesaya-route-link > svg{
     display:block;
     width:260px;
     height:auto;
@@ -1595,7 +1598,43 @@ gap:20px;
 }
 
 .beesayatv-atlas-search{
+    position:relative;
     margin-bottom:16px;
+}
+
+.beesayatv-atlas-search::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 14px;
+    top: 50%;
+
+    width: 14px;
+    height: 14px;
+
+    transform: translateY(-50%);
+
+    pointer-events: none;
+
+    opacity: .55;
+
+    background-color: #393939;
+
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.7549 11.255H11.9649L11.6849 10.985C12.6649 9.845 13.2549 8.365 13.2549 6.755C13.2549 3.165 10.3449 0.255005 6.75488 0.255005C3.16488 0.255005 0.254883 3.165 0.254883 6.755C0.254883 10.345 3.16488 13.255 6.75488 13.255C8.36488 13.255 9.84488 12.665 10.9849 11.685L11.2549 11.965V12.755L16.2549 17.745L17.7449 16.255L12.7549 11.255ZM6.75488 11.255C4.26488 11.255 2.25488 9.245 2.25488 6.755C2.25488 4.26501 4.26488 2.255 6.75488 2.255C9.24488 2.255 11.2549 4.26501 11.2549 6.755C11.2549 9.245 9.24488 11.255 6.75488 11.255Z' fill='black'/%3E%3C/svg%3E");
+
+    mask-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.7549 11.255H11.9649L11.6849 10.985C12.6649 9.845 13.2549 8.365 13.2549 6.755C13.2549 3.165 10.3449 0.255005 6.75488 0.255005C3.16488 0.255005 0.254883 3.165 0.254883 6.755C0.254883 10.345 3.16488 13.255 6.75488 13.255C8.36488 13.255 9.84488 12.665 10.9849 11.685L11.2549 11.965V12.755L16.2549 17.745L17.7449 16.255L12.7549 11.255ZM6.75488 11.255C4.26488 11.255 2.25488 9.245 2.25488 6.755C2.25488 4.26501 4.26488 2.255 6.75488 2.255C9.24488 2.255 11.2549 4.26501 11.2549 6.755C11.2549 9.245 9.24488 11.255 6.75488 11.255Z' fill='black'/%3E%3C/svg%3E");
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-position: center;
+    mask-position: center;
+
+    -webkit-mask-size: contain;
+    mask-size: contain;
+
 }
 
 #trail-search{
@@ -1617,6 +1656,7 @@ gap:20px;
 
     transition:border-color .2s ease,
                box-shadow .2s ease;
+	padding-left: 42px;
 }
 
 #trail-search::placeholder{
@@ -1651,19 +1691,150 @@ rounded trail atlas
     overflow:hidden;
 }
 
+/* add map border */
+#beesayatv-test-map {
+    border: 2px solid #d9d3c3;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.beesaya-route-link:hover,
+.beesaya-route-link:focus,
+.beesaya-route-link:focus-visible{
+    outline: none;
+}
+
+/* hide the trail atlas title to make more room for the map */
+.page-id-96 .entry-title{
+    display:none;
+}
+
+
+/* ===========================================
+   404 Page
+=========================================== */
+
+.page-404{
+
+    max-width:700px;
+   margin:20px auto 40px;
+    text-align:center;
+
+}
+
+.page-404 .entry-title{
+
+    margin-bottom:25px;
+
+}
+
+.page-404 p{
+
+    font-size:1.1rem;
+    line-height:1.6;
+    color:#666;
+
+}
+
+.beesayatv-404-actions{
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:14px;
+    margin-top:35px;
+
+}
+
+.beesayatv-404-actions .button{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+   padding:10px 18px;
+
+    border-radius:10px;
+
+    background:#556B3B;
+    color:#fff;
+    text-decoration:none;
+
+    transition:.2s;
+
+}
+
+.beesayatv-404-actions .button:hover{
+
+    background:#44572F;
+    color:#fff;
+
+}
+
+@media (max-width:768px){
+
+.beesayatv-404-actions{
+
+    display:grid;
+
+    grid-template-columns:repeat(2, 140px);
+
+    justify-content:center;
+
+    gap:14px;
+
+}
+
+.beesayatv-404-actions .button{
+
+    min-height:44px;
+
+    padding:0 12px;
+
+    border-radius:10px;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+}
+
+}
+
 /*
-styling the atlas 
-error
+|--------------------------------------------------------------------------
+| Explore the Archive
+|--------------------------------------------------------------------------
 */
 
-#trail-search-message{
+.trail-archive-links {
+    margin-top: 1.5rem;
+}
 
-    display:none;
+.trail-archive-item + .trail-archive-item {
+    margin-top: 1.5rem;
+}
 
-    margin-top:8px;
+.trail-archive-item h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #777;
+    line-height: 1.4;
+}
 
-    font-size:14px;
+.trail-archive-item p {
+    margin: .2rem 0 0;
+    line-height: 1.6;
+}
 
-    color:#777;
+.trail-archive-links a {
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-decoration: none;
+}
 
+.trail-archive-links a:hover,
+.trail-archive-links a:focus {
+    text-decoration: underline;
 }

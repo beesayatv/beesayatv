@@ -621,32 +621,42 @@ Route Thumbnail
     border-radius:16px;
 }
 
-.beesaya-route-link svg{
+/* Only animate the static route map */
+.beesaya-route-map > .beesaya-route-link > svg{
+    display:block;
+    width:260px;
+    height:auto;
     transition:transform .25s ease;
 }
 
-.beesaya-route-link:hover svg{
+.beesaya-route-map > .beesaya-route-link:hover > svg{
     transform:scale(1.02);
 }
 
 .beesaya-open-map{
     position:absolute;
+    top:16px;
+    right:10px;
+
+    width:30px;
+    height:30px;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    top:10px;
-    right:10px;
-    width:30px;
-    height:30px;
-    padding:0;
+
     background:rgba(245,242,232,.95);
     border:1px solid #d8d2bf;
     border-radius:50%;
-    color:#4D533F;
-    font-size:.75rem;
-    font-weight:700;
-    line-height:1;
-    transition:.2s ease;
+    z-index:5;
+}
+
+@media (max-width:768px){
+
+    .beesaya-open-map{
+        right:21px;
+    }
+
 }
 
 .beesaya-open-map svg{
@@ -1799,4 +1809,42 @@ rounded trail atlas
 
 }
 
+}
+
+/*
+|--------------------------------------------------------------------------
+| Explore the Archive
+|--------------------------------------------------------------------------
+*/
+
+.trail-archive-links {
+    margin-top: 1.5rem;
+}
+
+.trail-archive-item + .trail-archive-item {
+    margin-top: 1.5rem;
+}
+
+.trail-archive-item h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #777;
+    line-height: 1.4;
+}
+
+.trail-archive-item p {
+    margin: .2rem 0 0;
+    line-height: 1.6;
+}
+
+.trail-archive-links a {
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.trail-archive-links a:hover,
+.trail-archive-links a:focus {
+    text-decoration: underline;
 }
