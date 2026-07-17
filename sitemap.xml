@@ -1,28 +1,28 @@
 <?xml version='1.0' encoding='UTF-8'?><?xml-stylesheet type='text/xsl' href='https://www.beesayatv.com/wp-content/plugins/google-sitemap-generator/sitemap.xsl'?><!-- sitemap-generator-url='http://www.arnebrachhold.de/' sitemap-generator-version='4.1.24' -->
-<!-- generated-on='July 17, 2026 4:51 am' -->
+<!-- generated-on='July 17, 2026 8:16 am' -->
 <sitemapindex xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd' xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>	<sitemap>
 		<loc>https://www.beesayatv.com/sitemap-misc.xml</loc>
-		<lastmod>2026-07-16T11:43:23+00:00</lastmod>
+		<lastmod>2026-07-17T06:22:07+00:00</lastmod>
 	</sitemap>
 	<sitemap>
 		<loc>https://www.beesayatv.com/trail_location-sitemap.xml</loc>
-		<lastmod>2026-07-16T11:43:23+00:00</lastmod>
+		<lastmod>2026-07-17T06:22:07+00:00</lastmod>
 	</sitemap>
 	<sitemap>
 		<loc>https://www.beesayatv.com/trail_feature-sitemap.xml</loc>
-		<lastmod>2026-07-16T11:43:23+00:00</lastmod>
+		<lastmod>2026-07-17T06:22:07+00:00</lastmod>
 	</sitemap>
 	<sitemap>
 		<loc>https://www.beesayatv.com/trail_type-sitemap.xml</loc>
-		<lastmod>2026-07-16T11:43:23+00:00</lastmod>
+		<lastmod>2026-07-17T06:22:07+00:00</lastmod>
 	</sitemap>
 	<sitemap>
 		<loc>https://www.beesayatv.com/trail_difficulty-sitemap.xml</loc>
-		<lastmod>2026-07-16T11:43:23+00:00</lastmod>
+		<lastmod>2026-07-17T06:22:07+00:00</lastmod>
 	</sitemap>
 	<sitemap>
 		<loc>https://www.beesayatv.com/trail-sitemap.xml</loc>
-		<lastmod>2026-07-15T14:09:41+00:00</lastmod>
+		<lastmod>2026-07-17T06:22:07+00:00</lastmod>
 	</sitemap>
 	<sitemap>
 		<loc>https://www.beesayatv.com/post-sitemap.xml</loc>
@@ -32,4 +32,4 @@
 		<loc>https://www.beesayatv.com/page-sitemap.xml</loc>
 		<lastmod>2026-07-14T12:51:36+00:00</lastmod>
 	</sitemap>
-</sitemapindex><!-- <p>Please edit wp-db.inc.php in wp-includes and set SAVEQUERIES to true if you want to see the queries.</p> --> <!-- Request ID: b0823d06d984518f98fa5dac7609789e; Queries for sitemap: 10; Total queries: 25; Seconds: 0.01; Memory for sitemap: 1KB; Total memory: 6MB -->
+</sitemapindex><!-- <p>Please edit wp-db.inc.php in wp-includes and set SAVEQUERIES to true if you want to see the queries.</p> --> <!-- Request ID: 0d6b9a0d5f1e4fc30c5b3aaa0af44975; Queries for sitemap: 10; Total queries: 25; Seconds: 0.01; Memory for sitemap: 1KB; Total memory: 6MB -->
