@@ -1,8 +1,6 @@
 function initBeesayaAudioTracking() {
 
-    const audioPlayers = document.querySelectorAll(
-        ".wp-block-h5ap-audioplayer audio"
-    );
+    const audioPlayers = document.querySelectorAll(".wp-block-audio audio");
 
     if (audioPlayers.length === 0) {
         return false;
@@ -17,6 +15,10 @@ function initBeesayaAudioTracking() {
         audio.dataset.beesayaTracked = "true";
 
         audio.addEventListener("play", function() {
+
+            if (typeof gtag !== "function") {
+                return;
+            }
 
             gtag("event", "audio_play", {
 

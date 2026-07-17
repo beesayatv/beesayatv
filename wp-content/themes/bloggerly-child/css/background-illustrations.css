@@ -15,7 +15,7 @@ body::before{
     z-index:0;
 
     background:
-        url("https://www.beesayatv.com/wp-content/themes/bloggerly-child/assets/images/site-atmosphere.png")
+        url("https://beesayatv.com/wp-content/themes/bloggerly-child/assets/images/site-atmosphere.png")
         center 180px / 100% auto
         no-repeat;
 }

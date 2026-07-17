@@ -9,7 +9,7 @@
 	--updraft-dialog-radius: 16px;
 	--updraft-button-radius: 32px;
 	--updraft-overlay-bg: rgba(51, 51, 51, 0.95);
-	--updraft-close-icon: url("https://www.beesayatv.com/wp-content/plugins/updraftplus/vendor/team-updraft/common-libs/src/updraft-plugin-deinstall-dialog/assets/css/close-icon.svg");
+	--updraft-close-icon: url("https://beesayatv.com/wp-content/plugins/updraftplus/vendor/team-updraft/common-libs/src/updraft-plugin-deinstall-dialog/assets/css/close-icon.svg");
 }
 
 body.updraft-no-scroll {
