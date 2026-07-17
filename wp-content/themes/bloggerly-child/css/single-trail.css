@@ -29,8 +29,8 @@ until the old selectors are fully retired.
 @media (max-width:768px){
 
     .btv-single-trail{
-        background:none;
-        padding:20px;
+        background:transparent;
+        padding:5px;
         border-radius:0;
         box-shadow:none;
     }
