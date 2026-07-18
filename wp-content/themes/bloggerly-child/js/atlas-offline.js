@@ -15,6 +15,7 @@
     var progressBar = document.getElementById('atlas-offline-progress-bar');
     var config = window.beesayatvAtlasOfflineConfig || {};
     var registration;
+    var statusTimeout;
 
     if (!('serviceWorker' in navigator) || !window.isSecureContext) {
         panel.dataset.state = 'local-preview';
@@ -92,6 +93,10 @@
 
     function checkSavedMap() {
         workerMessage({ type: 'ATLAS_OFFLINE_STATUS' });
+        window.clearTimeout(statusTimeout);
+        statusTimeout = window.setTimeout(function () {
+            showInitialChoice();
+        }, 2500);
     }
 
     function startDownload() {
@@ -122,6 +127,7 @@
         var message = event.data || {};
 
         if (message.type === 'ATLAS_OFFLINE_STATUS') {
+            window.clearTimeout(statusTimeout);
             message.ready ? showReady() : showInitialChoice();
         }
 
