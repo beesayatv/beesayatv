@@ -86,6 +86,11 @@ font-family: var(--font-body);
 font-weight: 700;
 }
 
+/* Explore card titles are links, but should not inherit article-body underlines. */
+.entry-content .post-card-link {
+    text-decoration: none;
+}
+
 /* ==================================================
 REMOVE BLOG FEEL
 ================================================== */
