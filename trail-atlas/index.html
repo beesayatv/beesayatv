@@ -124,13 +124,13 @@ margin:24px 0;
 <link rel="stylesheet" id="dashicons-css" href="https://beesayatv.com/wp-includes/css/dashicons.min.css?ver=7.0.1" media="all">
 <link rel="stylesheet" id="beesayatv-cards-css" href="https://beesayatv.com/wp-content/themes/bloggerly-child/css/cards.css?ver=1784273280" media="all">
 <link rel="stylesheet" id="chld_thm_cfg_parent-css" href="https://beesayatv.com/wp-content/themes/bloggerly/style.css?ver=7.0.1" media="all">
-<link rel="stylesheet" id="beesayatv-child-style-css" href="https://beesayatv.com/wp-content/themes/bloggerly-child/style.css?ver=1784371393" media="all">
+<link rel="stylesheet" id="beesayatv-child-style-css" href="https://beesayatv.com/wp-content/themes/bloggerly-child/style.css?ver=1784373838" media="all">
 <link rel="stylesheet" id="beesayatv-audio-player-css" href="https://beesayatv.com/wp-content/themes/bloggerly-child/css/audio-player.css?ver=1784294383" media="all">
 <link rel="stylesheet" id="bloggerly-style-css" href="https://beesayatv.com/wp-content/themes/bloggerly-child/style.css?ver=1.0.5.1782171480" media="all">
 <link rel="stylesheet" id="beesayatv-page-style-css" href="https://beesayatv.com/wp-content/themes/bloggerly-child/css/page.css?ver=1784268313" media="all">
 <link rel="stylesheet" id="beesayatv-header-style-css" href="https://beesayatv.com/wp-content/themes/bloggerly-child/css/header.css?ver=1784271716" media="all">
 <link rel="stylesheet" id="beesayatv-footer-style-css" href="https://beesayatv.com/wp-content/themes/bloggerly-child/css/footer.css?ver=1784271718" media="all">
-<link rel="stylesheet" id="beesayatv-trail-atlas-style-css" href="https://beesayatv.com/wp-content/themes/bloggerly-child/css/trail-atlas.css?ver=1784289871" media="all">
+<link rel="stylesheet" id="beesayatv-trail-atlas-style-css" href="https://beesayatv.com/wp-content/themes/bloggerly-child/css/trail-atlas.css?ver=1784373016" media="all">
 <link rel="stylesheet" id="beesayatv-background-illustrations-css" href="https://beesayatv.com/wp-content/themes/bloggerly-child/css/background-illustrations.css?ver=1784253574" media="all">
 <link rel="https://api.w.org/" href="https://beesayatv.com/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://beesayatv.com/wp-json/wp/v2/pages/96"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://beesayatv.com/xmlrpc.php?rsd">
 <meta name="generator" content="WordPress 7.0.1">
@@ -483,6 +483,8 @@ window.WPLeafletMapPlugin.createMap(options).setView([44.67,-63.61],5);});</scri
 
 <button id="trail-search-submit" type="button">Search</button>
 
+<div id="trail-search-results" class="trail-search-results" role="listbox" aria-label="Matching trails" hidden></div>
+
 </div>
 <div id="beesayatv-test-map" style="height:500px;"></div>
 
@@ -829,6 +831,58 @@ function bindTrailPopup(sectionLayer, sectionPopupHtml) {
     });
 }
 
+function routeMidpoint(layer) {
+    var points = [];
+
+    function collectPoints(currentLayer) {
+        if (currentLayer.getLatLngs) {
+            var latLngs = currentLayer.getLatLngs();
+            var flatten = function(items) {
+                items.forEach(function(item) {
+                    if (Array.isArray(item)) {
+                        flatten(item);
+                    } else if (item && typeof item.lat === 'number' && typeof item.lng === 'number') {
+                        points.push(item);
+                    }
+                });
+            };
+            flatten(latLngs);
+        } else if (currentLayer.eachLayer) {
+            currentLayer.eachLayer(collectPoints);
+        }
+    }
+
+    collectPoints(layer);
+
+    if (points.length < 2) {
+        return points[0] || null;
+    }
+
+    var totalDistance = 0;
+    var distances = [];
+    for (var index = 1; index < points.length; index++) {
+        var distance = map.distance(points[index - 1], points[index]);
+        distances.push(distance);
+        totalDistance += distance;
+    }
+
+    var halfway = totalDistance / 2;
+    var travelled = 0;
+    for (var distanceIndex = 0; distanceIndex < distances.length; distanceIndex++) {
+        if (travelled + distances[distanceIndex] >= halfway) {
+            var remaining = halfway - travelled;
+            var ratio = distances[distanceIndex] ? remaining / distances[distanceIndex] : 0;
+            return L.latLng(
+                points[distanceIndex].lat + (points[distanceIndex + 1].lat - points[distanceIndex].lat) * ratio,
+                points[distanceIndex].lng + (points[distanceIndex + 1].lng - points[distanceIndex].lng) * ratio
+            );
+        }
+        travelled += distances[distanceIndex];
+    }
+
+    return points[points.length - 1];
+}
+
 if (segments) {
     // Both the colored line and its transparent 25px interaction layer identify the clicked section.
     layer.eachLayer(function (visibleSectionLayer) {
@@ -845,8 +899,11 @@ if (segments) {
 	trailLayers[trail.slug] = {
 		slug: trail.slug,
 		title: trail.title,
-			layer: layer,
-    clickLayer: clickLayer
+		searchTitle: popupTitle,
+		difficulty: trail.difficulty,
+		layer: layer,
+		clickLayer: clickLayer,
+        popupLatLng: routeMidpoint(clickLayer)
 	};
 
                     allLayers.push(layer);
@@ -856,13 +913,7 @@ if (segments) {
 			var group = L.featureGroup(allLayers);
 		
 if (focusedTrail && trailLayers[focusedTrail]) {
-
-    map.fitBounds(
-        trailLayers[focusedTrail].layer.getBounds(),
-        {
-            padding: [30, 30]
-        }
-    );
+    focusTrail(trailLayers[focusedTrail]);
    
 }else {
 
@@ -928,52 +979,180 @@ pois.forEach(function(poi) {
 
 var search = document.getElementById("trail-search");
 var searchSubmit = document.getElementById("trail-search-submit");
+var searchResults = document.getElementById("trail-search-results");
+var searchTimer;
+var activeResultIndex = -1;
 
-function zoomToTrail() {
+function matchingTrails(query) {
+    var normalizedQuery = query.trim().toLowerCase();
 
-	search.placeholder = "Search the map...";
-    var query = search.value.trim().toLowerCase();
-
-    if (!query) {
-        return;
+    if (!normalizedQuery) {
+        return [];
     }
 
-    var selected = null;
+    return Object.keys(trailLayers).map(function(slug) {
+        return trailLayers[slug];
+    }).filter(function(trail) {
+        return trail.slug.toLowerCase().includes(normalizedQuery) || trail.title.toLowerCase().includes(normalizedQuery);
+    }).sort(function(a, b) {
+        var aExact = a.title.toLowerCase() === normalizedQuery || a.slug.toLowerCase() === normalizedQuery;
+        var bExact = b.title.toLowerCase() === normalizedQuery || b.slug.toLowerCase() === normalizedQuery;
+        return Number(bExact) - Number(aExact) || a.title.localeCompare(b.title);
+    });
+}
 
-    for (var name in trailLayers) {
+function closeSearchResults() {
+    searchResults.hidden = true;
+    searchResults.replaceChildren();
+    activeResultIndex = -1;
+    search.setAttribute('aria-activedescendant', '');
+}
 
-        if (name.toLowerCase().includes(query) || selected === null && trailLayers[name].title.toLowerCase().includes(query)) {
-            selected = trailLayers[name];
-            break;
-        }
+function openTrailPopup(trail) {
+    var popupLayer = trail.clickLayer;
 
+    if (popupLayer && typeof popupLayer.eachLayer === 'function' && !popupLayer.getPopup()) {
+        popupLayer.eachLayer(function(childLayer) {
+            if (!popupLayer.getPopup() && childLayer.getPopup()) {
+                popupLayer = childLayer;
+            }
+        });
     }
 
-	if (!selected) {
+    if (popupLayer && popupLayer.getPopup()) {
+        popupLayer.openPopup(trail.popupLatLng || trail.layer.getBounds().getCenter());
+    }
+}
 
-		search.value = "";
-		search.placeholder = "No matching result";
-
-		return;
-	}
-    map.fitBounds(selected.layer.getBounds(), {
+function focusTrail(trail) {
+    map.fitBounds(trail.layer.getBounds(), {
         padding: [30, 30]
     });
 
- 
+    window.setTimeout(function() {
+        openTrailPopup(trail);
+    }, 250);
 }
 
-search.addEventListener("change", zoomToTrail);
+function selectTrail(trail) {
+    closeSearchResults();
+    search.value = trail.searchTitle || trail.title;
+    focusTrail(trail);
+}
 
-search.addEventListener("keydown", function(e){
+function renderSearchResults() {
+    var query = search.value.trim();
+    var matches = matchingTrails(query);
 
-    if(e.key === "Enter"){
-        zoomToTrail();
+    searchResults.replaceChildren();
+    activeResultIndex = -1;
+    search.setAttribute('aria-activedescendant', '');
+
+    if (!query) {
+        closeSearchResults();
+        return;
     }
 
+    if (!matches.length) {
+        var emptyState = document.createElement('div');
+        emptyState.className = 'trail-search-results__empty';
+        emptyState.textContent = 'No matching trails';
+        searchResults.appendChild(emptyState);
+        searchResults.hidden = false;
+        return;
+    }
+
+    matches.slice(0, 6).forEach(function(trail, index) {
+        var result = document.createElement('button');
+        var title = document.createElement('span');
+        var difficulty = document.createElement('span');
+
+        result.type = 'button';
+        result.className = 'trail-search-results__item';
+        result.id = 'trail-search-result-' + index;
+        result.setAttribute('role', 'option');
+        result.setAttribute('aria-selected', 'false');
+        title.className = 'trail-search-results__title';
+        title.textContent = trail.searchTitle || trail.title;
+        difficulty.className = 'trail-search-results__difficulty';
+        difficulty.textContent = trail.difficulty || 'Unknown';
+        result.append(title, difficulty);
+        result.addEventListener('click', function() {
+            selectTrail(trail);
+        });
+        searchResults.appendChild(result);
+    });
+
+    searchResults.hidden = false;
+}
+
+function setActiveResult(index) {
+    var items = searchResults.querySelectorAll('.trail-search-results__item');
+
+    if (!items.length) {
+        return;
+    }
+
+    activeResultIndex = (index + items.length) % items.length;
+    items.forEach(function(item, itemIndex) {
+        item.classList.toggle('is-active', itemIndex === activeResultIndex);
+        item.setAttribute('aria-selected', itemIndex === activeResultIndex ? 'true' : 'false');
+    });
+    search.setAttribute('aria-activedescendant', items[activeResultIndex].id);
+    items[activeResultIndex].scrollIntoView({ block: 'nearest' });
+}
+
+function submitSearch() {
+    var matches = matchingTrails(search.value);
+
+    if (matches.length === 1) {
+        selectTrail(matches[0]);
+        return;
+    }
+
+    renderSearchResults();
+}
+
+search.addEventListener('input', function() {
+    window.clearTimeout(searchTimer);
+    searchTimer = window.setTimeout(renderSearchResults, 225);
 });
 
-searchSubmit.addEventListener("click", zoomToTrail);
+search.addEventListener('focus', function() {
+    if (search.value.trim()) {
+        renderSearchResults();
+    }
+});
+
+search.addEventListener("keydown", function(e){
+    if (e.key === 'ArrowDown' && !searchResults.hidden) {
+        e.preventDefault();
+        setActiveResult(activeResultIndex + 1);
+    } else if (e.key === 'ArrowUp' && !searchResults.hidden) {
+        e.preventDefault();
+        setActiveResult(activeResultIndex - 1);
+    } else if (e.key === 'Enter') {
+        e.preventDefault();
+        var items = searchResults.querySelectorAll('.trail-search-results__item');
+        if (activeResultIndex >= 0 && items[activeResultIndex]) {
+            items[activeResultIndex].click();
+        } else {
+            submitSearch();
+        }
+    } else if (e.key === 'Escape') {
+        closeSearchResults();
+    }
+});
+
+searchSubmit.addEventListener('click', submitSearch);
+
+document.addEventListener('pointerdown', function(e) {
+    if (!e.target.closest('.beesayatv-atlas-search')) {
+        closeSearchResults();
+    }
+});
+
+map.on('click dragstart zoomstart', closeSearchResults);
     });
     </script>
 

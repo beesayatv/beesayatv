@@ -7,12 +7,21 @@
 .trail-route-popup .leaflet-popup-content p{line-height:1.3!important;}
 .trail-route-popup .leaflet-popup-content .trail-route-popup__link{margin:8px 0 0!important;}
 .trail-route-popup .leaflet-popup-content .trail-route-popup__link + .trail-route-popup__link{margin-top:6px!important;}
-.beesayatv-atlas-search{position:relative;margin-bottom:16px;}
+.beesayatv-atlas-search{position:relative;margin-bottom:16px;z-index:1000;}
 #trail-search{width:100%;height:54px;padding:0 94px 0 18px;box-sizing:border-box;background:#fff;border:1px solid #d6d6d6;border-radius:8px;font-size:16px;font-family:inherit;transition:border-color .2s ease,box-shadow .2s ease;}
 #trail-search::placeholder{color:#888;}
 #trail-search:focus{outline:none;border-color:#9A9D84;box-shadow:0 0 0 3px rgba(154,157,132,.18);}
 #trail-search-submit{position:absolute;top:50%;right:6px;transform:translateY(-50%);min-height:40px;padding:0 13px;border:0;border-radius:6px;background:#F5F2E8;color:#263525;font:600 14px/1 "Nunito Sans",sans-serif;cursor:pointer;}
 #trail-search-submit:hover,#trail-search-submit:focus{background:#e9e5d9;}
 #trail-search-submit:focus-visible{outline:2px solid #697055;outline-offset:2px;}
+.trail-search-results{position:absolute;top:calc(100% + 6px);left:0;right:0;max-height:324px;overflow-y:auto;background:#fff;border:1px solid #d6d6d6;border-radius:8px;box-shadow:0 8px 20px rgba(38,53,37,.18);z-index:1001;}
+.trail-search-results[hidden]{display:none;}
+.trail-search-results__item{width:100%;display:flex;align-items:center;gap:12px;padding:12px 14px;border:0;border-bottom:1px solid #ece8dc;background:#fff;color:#263525;text-align:left;font:inherit;cursor:pointer;}
+.trail-search-results__item:last-child{border-bottom:0;}
+.trail-search-results__item:hover,.trail-search-results__item:focus,.trail-search-results__item.is-active{background:#f5f2e8;outline:none;}
+.trail-search-results__title{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.trail-search-results__difficulty{margin-left:auto;flex:0 0 auto;color:#65705f;font-size:13px;text-transform:capitalize;}
+.trail-search-results__empty{padding:14px;color:#65705f;font-size:14px;}
+@media (max-width:480px){.trail-search-results{max-height:270px;}.trail-search-results__item{padding:11px 12px;}.trail-search-results__difficulty{font-size:12px;}}
 .leaflet-map{display:none;}
 #beesayatv-test-map{border:2px solid #d9d3c3;border-radius:8px;overflow:hidden;}
